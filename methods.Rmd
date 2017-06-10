@@ -17,25 +17,25 @@ knitr::opts_chunk$set(collapse = TRUE, comment = '#>')
 # gr32a regulatory region
 
 Referenced in the manuscript as "3.7 kbp regulatory region"; it contains a gene
-(CG6201) transcribed in the opposite direction of gr32a. We previously analyzed
-a 661 bp sub-region immediately upstream gr32a.
+(CG6201) transcribed in the opposite direction of gr32a. It is 3,798 bp long.
+We had previously analyzed a 661 bp sub-region immediately upstream gr32a.
 
 ## Coordinates
 
-#### `chr2L:11,110,412-11,114,209`
+#### dm6: `chr2L:11,110,412-11,114,209`
 
 Browser coordinates obtained by BLAT search of *melanogaster* sequence
 `>Gr32[mel]` in file: `Gr32aReg.rtf` (copied to `gr32a_3.7kb_upstrm.fa`)
 against the *dm6* melanogaster genome assembly.
 
-**NB: UCSC browser coordinates start at 1 and include the end of a region, i.e.
-"1-offset closed". MAF and BED formats start counting with 0 (0-offset), BED
-format does not include the stop coordinate in the region---it is
+**NB: UCSC browser coordinates start at 1 and include the end of the interval, i.e.
+"1-offset closed". MAF and BED formats start counting with 0 (0-offset). BED
+format does not include the stop coordinate in the interval---it is
 "right-open"**
 
 Intron/CDS/UTR/intergenic regions were obtained from the UCSC Table Browser in
-BED format. "Intergenic" is the 3.7kb region minus "whole gene" features. I
-also downloaded the conserved elements.
+BED format. "Intergenic" is the 3.7kbp region minus "whole gene" features. I
+also downloaded the phastCons conserved elements.
 
 ```{bash}
 bedtools subtract -a reg_3.7/coords/reg_3.7.bed -b reg_3.7/coords/wholegene.bed > reg_3.7/coords/intergenic.bed
@@ -120,27 +120,27 @@ phylop --subtree droSim1 --wig-scores --method LRT --mode CONACC dm6.phyloP27way
 ```
 
 - Make table ([**`phylop.tsv`**](./phylop.tsv), [mktbl.R](./scripts/mktbl.R)) of
-  likelood ratio test (LRT) scores and regions:
-    - coordinate
-    - is_consEl27
-    - LRT_all
-    - LRT_dmel
-    - LRT_dsim
-    - browser_LRT_all
-    - is_661
-    - is_utr3
-    - is_utr5
-    - is_cds
-    - is_intron
-    - is_intergenic
+  phyloP scores and regions:
+    - pos (browser coordinate)
+    - isConsEl
+    - phylop_allbr
+    - phylop_dmel
+    - phylop_dsim
+    - browser_phylop_allbr
+    - is661
+    - isUTR3
+    - isUTR5
+    - isCDS
+    - isIntron
+    - isIntrgn
 
 ```{bash}
 scripts/mktbl.R reg_3.7/
 ```
 
 - Extra/TODO: Re-call phastCons elements for non-*melanogaster* and non-*simulans*.
-    - is_consEl_nomel
-    - is_consEl_nosim
+    - isConsEl_nomel
+    - isConsEl_nosim
 
 - Histogram of p-values for mel, sim
   **Figures:** See [./figs.html](./figs.html)

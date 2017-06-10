@@ -1,4 +1,4 @@
-pos	browser_LRT_all	LRT_all	LRT_dmel	LRT_dsim	isConsEl	is661	isCDS	isUTR5	isUTR3	isIntron	isIntrgn
+pos	browser_phylop_allbr	phylop_allbr	phylop_dmel	phylop_dsim	isConsEl	is661	isCDS	isUTR5	isUTR3	isIntron	isIntrgn
 11110412	4.22652	4.268	0.039	0.024	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
 11110413	4.3689	4.404	0.039	0.024	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE
 11110414	1.30777	1.318	0.057	0.035	TRUE	FALSE	TRUE	FALSE	FALSE	FALSE	FALSE

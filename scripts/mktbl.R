@@ -43,29 +43,29 @@ intrgn_bed <- read_tsv(
 )
 
 # ---- wiggles ----
-browser_phylop_all <- read_tsv(
+browser_phylop_allbr <- read_tsv(
   "./tracks/dm6-allbr-phylop27.wig.gz",
   comment = "#",
   skip = 2,
-  col_names = c("pos", "browser_LRT_all")
+  col_names = c("pos", "browser_phylop_allbr")
 )
-phylop_all <- read_tsv(
+phylop_allbr <- read_tsv(
   "./phylop/allbr-phylop27.wig",
   comment = "#",
   skip = 1,
-  col_names = c("LRT_all")
+  col_names = c("phylop_allbr")
 )
 phylop_dmel <- read_tsv(
   "./phylop/dm6-phylop27.wig",
   comment = "#",
   skip = 1,
-  col_names = c("LRT_dmel")
+  col_names = c("phylop_dmel")
 )
 phylop_dsim <- read_tsv(
   "./phylop/droSim1-phylop27.wig",
   comment = "#",
   skip = 1,
-  col_names = c("LRT_dsim")
+  col_names = c("phylop_dsim")
 )
 
 # ---- functions ----
@@ -85,8 +85,8 @@ isInBed <- function(pos1_v, bed){
 
 # ---- main ----
 phylop_tbl <- bind_cols(
-  browser_phylop_all,
-  phylop_all,
+  browser_phylop_allbr,
+  phylop_allbr,
   phylop_dmel,
   phylop_dsim
 ) %>%
