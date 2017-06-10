@@ -43,7 +43,6 @@ Computed in [methods](./methods.html), tabulated by [mktbl.R](./scripts/mktbl.R)
 library(tidyverse)
 library(magrittr)
 library(pander)
-library(stargazer)
 
 scores <- read_tsv("./results/phylop.tsv")
 scores %<>% mutate(isUTR = isUTR3 | isUTR5)
