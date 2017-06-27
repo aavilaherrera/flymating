@@ -1,5 +1,5 @@
 ---
-title: "Fly Mating: evolution rate methods"
+title: "Supplemental Methods: Fly mating evolution"
 author: "Aram Avila-Herrera"
 date: "`r date()`"
 output:
@@ -12,6 +12,18 @@ output:
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = '#>')
+sanitizeRSession <- function(s){
+  s$platform <- ""
+  s$running <- ""
+  s$R.version$platform <- ""
+  s$R.version$os <- ""
+  s$R.version$system <- ""
+  s$BLAS <- basename(s$BLAS)
+  s$LAPACK <- basename(s$LAPACK)
+  s
+}
+oldSessionInfo <- sessionInfo
+sessionInfo <- function(){sanitizeRSession(s = oldSessionInfo())}
 ```
 
 # gr32a regulatory region
@@ -22,15 +34,15 @@ We had previously analyzed a 661 bp sub-region immediately upstream gr32a.
 
 ## Coordinates
 
-#### dm6: `chr2L:11,110,412-11,114,209`
+#### [dm6: `chr2L:11,110,412-11,114,209`](https://genome.ucsc.edu/cgi-bin/hgTracks?db=dm6&position=chr2L%3A11110412-11114209)
 
 Browser coordinates obtained by BLAT search of *melanogaster* sequence
 `>Gr32[mel]` in file: `Gr32aReg.rtf` (copied to `gr32a_3.7kb_upstrm.fa`)
 against the *dm6* melanogaster genome assembly.
 
-**NB: UCSC browser coordinates start at 1 and include the end of the interval, i.e.
+**Please note: UCSC browser coordinates start at 1 and include the end coordinate in the specified interval, i.e.
 "1-offset closed". MAF and BED formats start counting with 0 (0-offset). BED
-format does not include the stop coordinate in the interval---it is
+format does not consider the end coordinate to be in the interval---it is
 "right-open"**
 
 Intron/CDS/UTR/intergenic regions were obtained from the UCSC Table Browser in
@@ -112,6 +124,8 @@ branches. Especially, if they are in regions conserved across fruit flies,
 suggesting that something interesting may be occuring in a functional
 regulatory region.
 
+#### per-base scores
+
 - Re-run `phylop` with `--subtree dm6` and `--subtree droSim1`
 
 ```{bash}
@@ -132,22 +146,24 @@ phylop --subtree droSim1 --wig-scores --method LRT --mode CONACC dm6.phyloP27way
     - isUTR5
     - isCDS
     - isIntron
-    - isIntrgn
+    - isIntergenic
 
 ```{bash}
-scripts/mktbl.R reg_3.7/
+scripts/mktbl.R reg_3.7/ 2> results/mktbl.stderr > results/mktbl.stdout
+head results/phylop.tsv
 ```
 
-- Extra/TODO: Re-call phastCons elements for non-*melanogaster* and non-*simulans*.
+- Extra/TODO: Re-call phastCons elements for non-*melanogaster* and non-*simulans* alignments.
     - isConsEl_nomel
     - isConsEl_nosim
 
 - Histogram of p-values for mel, sim
   **Figures:** See [./figs.html](./figs.html)
 
-#### By-feature
+#### per feature scores
 
-- Re-run `phylop` with `--features`
+- Re-run `phylop` with `--features` (one score for each exon, intron, utr,
+  intergenic region)
 
 ```{bash}
 # Be explicit about trimming and sorting features
@@ -166,8 +182,10 @@ phylop --features reg_3.7/coords/features.bed --subtree dm6 --method LRT --mode 
 phylop --features reg_3.7/coords/features.bed --subtree droSim1 --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/droSim1-phylop27-features.tsv
 ```
 
-Looks like we're underpowered in the branch test. Would it make sense to
-run phylop on each feature type instead?
+#### per feature type
+
+- Get one score/p-value per combined UTRs, combined CDSs, combined introns,
+  combined intergenic regions
 
 ```{bash}
 mmaf=reg_3.7/alignments/dm6-allbr-27way.maf
@@ -214,3 +232,47 @@ exonic vs non-exonic regions.
       e.g., 1.7 = -log10(p-value) => 0.02 = p-value;
 - dmel: same region, but test is only on melanogaster branch (dm3)
 - droSim1: same region, but test is only on simulans branch (droSim1)
+
+# Versions and Citations
+
+## bedtools
+
+Quinlan AR and Hall IM, 2010. BEDTools: a flexible suite of utilities for
+comparing genomic features. Bioinformatics. 26, 6, pp. 841–842.
+
+```{bash}
+bedtools --version
+```
+
+## bedops
+
+```{bash}
+bedops --version
+```
+
+## phast package
+
+```{bash}
+cat ~/src/phast/version
+phylop -h | tail -n 12
+```
+
+## R session info
+
+```{r}
+s <- sessionInfo()
+s
+```
+
+## R Citations
+
+```{r}
+lapply(
+  c(
+    s$basePkgs,
+    names(s$otherPkgs),
+    names(s$loadedOnly)
+  ),
+  citation
+)
+```

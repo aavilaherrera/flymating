@@ -1,5 +1,5 @@
 ---
-title: "Fly Mating: evolution rate figs"
+title: "Supplemental Methods: Fly mating evolution figures"
 author: "Aram Avila-Herrera"
 date: "`r date()`"
 output:
@@ -12,6 +12,18 @@ output:
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = '#>')
+sanitizeRSession <- function(s){
+  s$platform <- ""
+  s$running <- ""
+  s$R.version$platform <- ""
+  s$R.version$os <- ""
+  s$R.version$system <- ""
+  s$BLAS <- basename(s$BLAS)
+  s$LAPACK <- basename(s$LAPACK)
+  s
+}
+oldSessionInfo <- sessionInfo
+sessionInfo <- function(){sanitizeRSession(s = oldSessionInfo())}
 
 # from SO user DeanK: https://stackoverflow.com/a/18672268
 tn = local({
@@ -35,7 +47,9 @@ knitr::knit_hooks$set(output = function(x, options) {
 })
 ```
 
-# Load per-base scores and annotation
+# Per-base PhyloP scores
+
+## Load per-base scores and annotation
 
 Computed in [methods](./methods.html), tabulated by [mktbl.R](./scripts/mktbl.R)
 
@@ -52,10 +66,10 @@ plot(select(scores, browser_phylop_allbr, phylop_allbr))
 summary(select(scores, starts_with("phylop")))
 ```
 
-Convenience functions...
+Convenience functions:
 
 ```{r}
-# phyloP scores are -log10 p-values: negative for acceleration, positive for conservation
+# phyloP scores are -log10 p-values of a likelihood ratio test: negative for acceleration, positive for conservation
 score2p <- function(s){
   10^-(sign(s) * s)
 }
@@ -86,7 +100,7 @@ allbr_hist + facet_wrap(~isCDS, labeller = label_both)
 allbr_hist + facet_wrap(~isIntron, labeller = label_both)
 allbr_hist + facet_wrap(~isUTR, labeller = label_both)
 allbr_hist + facet_wrap(~isConsEl, labeller = label_both)
-allbr_hist + facet_grid(isConsEl~isIntrgn, labeller = label_both)
+allbr_hist + facet_grid(isConsEl~isIntergenic, labeller = label_both)
 ```
 
 ## melanogaster branch test
@@ -98,19 +112,19 @@ mel_hist
 mel_hist + facet_wrap(~isCDS, labeller = label_both)
 mel_hist + facet_wrap(~isIntron, labeller = label_both)
 mel_hist + facet_wrap(~isUTR, labeller = label_both)
-mel_hist + facet_grid(isConsEl~isIntrgn, labeller = label_both)
+mel_hist + facet_grid(isConsEl~isIntergenic, labeller = label_both)
 ```
 
 ## simulans branch test
 
 ```{r}
-sim_hist <- plot_histogram(scores, "phylop_dsim", fill_color = "#ff1d25") +
+sim_hist <- plot_histogram(scores, "phylop_dsim", fill_color = "#dc913c") +
   ylab(expression(paste("# of ", italic("D. sim"), " Bases")))
 sim_hist
 sim_hist + facet_wrap(~isCDS, labeller = label_both)
 sim_hist + facet_wrap(~isIntron, labeller = label_both)
 sim_hist + facet_wrap(~isUTR, labeller = label_both)
-sim_hist + facet_grid(isConsEl~isIntrgn, labeller = label_both)
+sim_hist + facet_grid(isConsEl~isIntergenic, labeller = label_both)
 ```
 
 ## Final histograms
@@ -139,7 +153,7 @@ allscores <- ggplot(scores_m, aes(x = phylop, fill = branch), color = "grey20") 
     values = c(
       "phylop_allbr" = "#68409c",
       "phylop_dmel" = "#3fa9f5",
-      "phylop_dsim" = "#ff1d25"
+      "phylop_dsim" = "#dc913c"
     )
   ) +
   xlab("PhyloP score") +
@@ -151,19 +165,19 @@ ggsave(plot = mel_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_
 ggsave(plot = sim_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0,2200)), "figs/droSim1-phylop-scores-hist-3.7k.pdf")
 ```
 
-### counts of accelerated sites
+### Counts of accelerated sites
 
-- A score of 2 or -2 corresponds to P-value of 0.01
+- A score of 2 or -2 corresponds to a raw P-value of 0.01 for that base
 - Negative := acceleration
 - Positive := conservation
 
 ```{r}
 sig_accel_counts <- scores %>%
   count(
-    allbr = phylop_allbr < -2,
-    dmel = phylop_dmel < -2,
-    dsim = phylop_dsim < -2,
-    isConsEl
+    "All branches" = phylop_allbr < -2,
+    "D. mel" = phylop_dmel < -2,
+    "D. sim" = phylop_dsim < -2,
+    "Is Cons El" = isConsEl
   )
 ```
 
@@ -175,10 +189,16 @@ knitr::kable(sig_accel_counts)
 pander(ftable(xtabs(n ~ ., sig_accel_counts)), style = "rmarkdown")
 ```
 
-# Load per-feature tests
+# Per-feature PhyloP tests
+
+## Load per-feature results
 
 ```{r per-feature-chunk, message = FALSE}
-ftr_fns <- list.files(path="reg_3.7/phylop", pattern = "-phylop27-ftr-\\w+\\.tsv", full.names = TRUE)
+ftr_fns <- list.files(
+  path="reg_3.7/phylop",
+  pattern = "-phylop27-ftr-\\w+\\.tsv",
+  full.names = TRUE
+)
 ftr_tbl <- lapply(ftr_fns, read_tsv) %>%
   setNames(., nm = sub("\\..*$", "", basename(ftr_fns))) %>%
   bind_rows(.id = "fn")
@@ -195,7 +215,32 @@ ftr_tbl %>% select(
 ftr_tbl %>%
   select(Branch, Feature, pval) %>%
   spread(Branch, pval) %>%
+  rename(
+    `All branches` = allbr,
+    `D. mel` = dm6,
+    `D. sim` = droSim1
+  ) %>%
   knitr::kable()
+```
+
+# R session info
+
+```{r}
+s <- sessionInfo()
+s
+```
+
+# R Citations
+
+```{r}
+lapply(
+  c(
+    s$basePkgs,
+    names(s$otherPkgs),
+    names(s$loadedOnly)
+  ),
+  citation
+)
 ```
 
 <script>

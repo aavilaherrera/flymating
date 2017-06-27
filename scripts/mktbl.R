@@ -97,7 +97,7 @@ phylop_tbl <- bind_cols(
     isUTR5 = isInBed(pos, utr5_bed),
     isUTR3 = isInBed(pos, utr3_bed),
     isIntron = isInBed(pos, introns_bed),
-    isIntrgn = isInBed(pos, intrgn_bed)
+    isIntergenic = isInBed(pos, intrgn_bed)
   )
 
 write_tsv(phylop_tbl, "../results/phylop.tsv")
