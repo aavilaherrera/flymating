@@ -28,9 +28,10 @@ sessionInfo <- function(){sanitizeRSession(s = oldSessionInfo())}
 
 # gr32a regulatory region
 
-Referenced in the manuscript as "3.7 kbp regulatory region"; it contains a gene
-(CG6201) transcribed in the opposite direction of gr32a. It is 3,798 bp long.
-We had previously analyzed a 661 bp sub-region immediately upstream gr32a.
+Referenced in the final manuscript as "3.8 kbp regulatory region" (and in
+working drafts as "3.7 kbp"); it contains a gene (CG6201) transcribed in the
+opposite direction of gr32a. It is 3,798 bp long.  We had previously analyzed a
+661 bp sub-region immediately upstream gr32a.
 
 ## Coordinates
 
@@ -46,7 +47,7 @@ format does not consider the end coordinate to be in the interval---it is
 "right-open"**
 
 Intron/CDS/UTR/intergenic regions were obtained from the UCSC Table Browser in
-BED format. "Intergenic" is the 3.7kbp region minus "whole gene" features. I
+BED format. "Intergenic" is the 3.8kbp region minus "whole gene" features. I
 also downloaded the phastCons conserved elements.
 
 ```{bash}
@@ -214,7 +215,7 @@ Our previous analysis focused on the 661bp region immediately upstream gr32a
 ### "New"
 
 Same methodology as "Old", just uses newer assemblies, alignments, and
-phylogenetic models. We also now look at the whole 3.7kb region and compare
+phylogenetic models. We also now look at the whole 3.8kb region and compare
 exonic vs non-exonic regions.
 
 - `dm6-phylop27.wig`
