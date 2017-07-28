@@ -100,7 +100,8 @@ See also: <https://genome.ucsc.edu/cgi-bin/hgTrackUi?g=cons27way&db=dm6>
 
 ### Verify methods against browser track
 
-Run `phylop` as above to check that we can reproduce the browser track.
+Run `phylop` as above to check that we can reproduce the browser track
+(all-branches, basewise test).
 
 ```{bash}
 phylop --wig-scores --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/allbr-phylop27.wig
@@ -118,14 +119,12 @@ gzcat reg_3.7/tracks/dm6-allbr-phylop27.wig.gz | head -n 20  # browser track
 ```
 
 
-### Branch tests
+### Subtree basewise tests
 
 We are interested in accelerated positions in the *melanogaster* and *simulans*
 branches. Especially, if they are in regions conserved across fruit flies,
 suggesting that something interesting may be occuring in a functional
 regulatory region.
-
-#### per-base scores
 
 - Re-run `phylop` with `--subtree dm6` and `--subtree droSim1`
 
@@ -161,7 +160,7 @@ head results/phylop.tsv
 - Histogram of p-values for mel, sim
   **Figures:** See [./figs.html](./figs.html)
 
-#### per feature scores
+### Feature tests
 
 - Re-run `phylop` with `--features` (one score for each exon, intron, utr,
   intergenic region)
@@ -176,14 +175,21 @@ cat reg_3.7/coords/{cds_exons,introns,utr3,utr5,intergenic}.bed | \
 head reg_3.7/coords/features.bed
 ```
 
+#### All-branches
+
 ```{bash}
-# Get phylop score for each feature
 phylop --features reg_3.7/coords/features.bed --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/allbr-phylop27-features.tsv
+```
+
+#### Subtree
+
+```{bash}
 phylop --features reg_3.7/coords/features.bed --subtree dm6 --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/dm6-phylop27-features.tsv
+
 phylop --features reg_3.7/coords/features.bed --subtree droSim1 --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/droSim1-phylop27-features.tsv
 ```
 
-#### per feature type
+### Feature-type tests
 
 - Get one score/p-value per combined UTRs, combined CDSs, combined introns,
   combined intergenic regions
@@ -195,8 +201,13 @@ for ftr in cds_exons utr introns intergenic; do
   fmaf=reg_3.7/alignments/dm6-allbr-27way-$ftr.maf
   bed=reg_3.7/coords/${ftr}.bed
   maf_parse --features ${bed} ${mmaf} > ${fmaf}
+
+  # all-branches
   phylop --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CONACC -i MAF dm6.phyloP27way.mod ${fmaf} > reg_3.7/phylop/allbr-phylop27-ftr-${ftr}.tsv
+
+  # subtree
   phylop --subtree dm6 --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CONACC -i MAF dm6.phyloP27way.mod ${fmaf} > reg_3.7/phylop/dm6-phylop27-ftr-${ftr}.tsv
+
   phylop --subtree droSim1 --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CONACC -i MAF dm6.phyloP27way.mod ${fmaf} > reg_3.7/phylop/droSim1-phylop27-ftr-${ftr}.tsv
 done
 ```

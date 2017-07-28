@@ -47,7 +47,7 @@ knitr::knit_hooks$set(output = function(x, options) {
 })
 ```
 
-# Per-base PhyloP scores
+# Basewise PhyloP scores
 
 ## Load per-base scores and annotation
 
@@ -189,9 +189,9 @@ knitr::kable(sig_accel_counts)
 pander(ftable(xtabs(n ~ ., sig_accel_counts)), style = "rmarkdown")
 ```
 
-# Per-feature PhyloP tests
+# Feature-type PhyloP tests
 
-## Load per-feature results
+## Load per-feature-type results
 
 ```{r per-feature-chunk, message = FALSE}
 ftr_fns <- list.files(
@@ -203,9 +203,9 @@ ftr_tbl <- lapply(ftr_fns, read_tsv) %>%
   setNames(., nm = sub("\\..*$", "", basename(ftr_fns))) %>%
   bind_rows(.id = "fn")
 ftr_tbl %<>%
-  separate(fn, c("Branch", "Feature"), "-phylop27-ftr-")
+  separate(fn, c("Branch", "FeatureType"), "-phylop27-ftr-")
 ftr_tbl %>% select(
-  Branch, Feature,
+  Branch, FeatureType,
   scale, lnlratio, pval,
   null_scale, alt_scale, alt_subscale
 )
@@ -213,7 +213,7 @@ ftr_tbl %>% select(
 
 ```{r per-feature-p-chunk, tab_cap = "phyloP P-values", message = FALSE}
 ftr_tbl %>%
-  select(Branch, Feature, pval) %>%
+  select(Branch, FeatureType, pval) %>%
   spread(Branch, pval) %>%
   rename(
     `All branches` = allbr,
