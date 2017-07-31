@@ -212,6 +212,14 @@ for ftr in cds_exons utr introns intergenic; do
 done
 ```
 
+### Whole-region tests
+
+#### All-branches conservation
+
+```{bash}
+phylop --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CON dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/allbr-phylop27-wholeregion-con.tsv
+```
+
 ---
 
 # Other notes
