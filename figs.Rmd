@@ -113,7 +113,7 @@ summary(select(scores, contains("allbr")))
 ```{r final-hists-chunk}
 mylabs <- as_labeller(
   c(
-    "browser_phylop_allbr" = "Whole~tree",
+    "browser_phylop_allbr" = "27~insects",
     "phylop_dmel" = paste(expression(italic("D. melanogaster"))),  # paste("foo~", expression(italic("bar")))
     "phylop_dsim" = paste(expression(italic("D. simulans")))
   ),
