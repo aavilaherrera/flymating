@@ -108,22 +108,22 @@ summary(select(scores, contains("allbr")))
 
 ## Final histograms
 
-(subtree test scores)
+(Fig S2DEF: all-branches test scores, subtree test scores for *D. melanogaster* and *D. simulans*)
 
 ```{r final-hists-chunk}
 mylabs <- as_labeller(
   c(
-    #"phylop_allbr" = "All~branches",
-    "phylop_dmel" = paste(expression(italic("D. mel"))),  # paste("foo~", expression(italic("bar")))
-    "phylop_dsim" = paste(expression(italic("D. sim")))
+    "browser_phylop_allbr" = "Whole~tree",
+    "phylop_dmel" = paste(expression(italic("D. melanogaster"))),  # paste("foo~", expression(italic("bar")))
+    "phylop_dsim" = paste(expression(italic("D. simulans")))
   ),
   label_parsed
 )
 
-scores_m <- select(scores, -browser_phylop_allbr) %>%
-  gather(branch, phylop, starts_with("phylop_d"))
+scores_m <- select(scores, -phylop_allbr) %>%
+  gather(branch, phylop, starts_with("phylop_d"), browser_phylop_allbr)
 
-subtreescores <- ggplot(scores_m, aes(x = phylop, fill = branch), color = "grey20") +
+allscores <- ggplot(scores_m, aes(x = phylop, fill = branch), color = "grey20") +
   geom_histogram(binwidth = 0.1) +
   facet_wrap(
     ~branch,
@@ -132,24 +132,27 @@ subtreescores <- ggplot(scores_m, aes(x = phylop, fill = branch), color = "grey2
   scale_fill_manual(
     guide = FALSE,
     values = c(
-      #"phylop_allbr" = "#68409c",
+      "browser_phylop_allbr" = "#68409c",
       "phylop_dmel" = "#3fa9f5",
       "phylop_dsim" = "#dc913c"
     )
   ) +
   xlab("PhyloP score") +
   ylab("# of 27way alignment columns")
-subtreescores
-ggsave(plot = subtreescores, "figs/subtree-phylop-scores-hist-3.7k.pdf")
+allscores
+ggsave(plot = allscores, "figs/allscores-phylop-scores-hist-3.7k.pdf")
 ```
 
 ## All-branches test
+
+(alternate Fig S2D)
 
 ```{r}
 br_allbr_hist <- plot_histogram(scores, "browser_phylop_allbr", fill_color = "#68409c") +
   ylab("# of 27way alignment columns")
 br_allbr_hist
-ggsave(plot = br_allbr_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0,2200)), "figs/browser_allbr-phylop-scores-hist-3.7k.pdf")
+ggsave(plot = br_allbr_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0, 2200)), "figs/browser_allbr-phylop-scores-hist-3.7k.pdf")
+ggsave(plot = br_allbr_hist + scale_y_continuous(breaks = seq(0, 200, 50)) + coord_cartesian(ylim = c(0, 210)), "figs/browser_allbr-phylop-scores-hist-3.7k-zoomed.pdf")
 ```
 
 ### By Annotation
@@ -229,23 +232,49 @@ br_allbr_hist + facet_wrap(~isIntergenic, labeller = label_both)
 
 ### Melanogaster
 
+(alternate Fig S2E)
+
 ```{r}
 mel_hist <- plot_histogram(scores, "phylop_dmel") +
   ylab(expression(paste("# of ", italic("D. mel"), " Bases")))
 mel_hist
-ggsave(plot = mel_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0,2200)), "figs/dm6-phylop-scores-hist-3.7k.pdf")
+ggsave(plot = mel_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0, 2200)), "figs/dm6-phylop-scores-hist-3.7k.pdf")
 ```
 
 ### Simulans
+
+(alternate Fig S2F)
 
 ```{r}
 sim_hist <- plot_histogram(scores, "phylop_dsim", fill_color = "#dc913c") +
   ylab(expression(paste("# of ", italic("D. sim"), " Bases")))
 sim_hist
-ggsave(plot = sim_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0,2200)), "figs/droSim1-phylop-scores-hist-3.7k.pdf")
+ggsave(plot = sim_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0, 2200)), "figs/droSim1-phylop-scores-hist-3.7k.pdf")
 ```
 
 ### By Annotation
+
+```{r}
+subtreescores <- ggplot(
+    filter(scores_m, grepl("^phylop_d", branch)),
+    aes(x = phylop, fill = branch), color = "grey20"
+  ) +
+  geom_histogram(binwidth = 0.1) +
+  facet_wrap(
+    ~branch,
+    labeller = mylabs
+  ) +
+  scale_fill_manual(
+    guide = FALSE,
+    values = c(
+      #"browser_phylop_allbr" = "#68409c",
+      "phylop_dmel" = "#3fa9f5",
+      "phylop_dsim" = "#dc913c"
+    )
+  ) +
+  xlab("PhyloP score") +
+  ylab("# of 27way alignment columns")
+```
 
 #### phastCons Elements
 
