@@ -7,6 +7,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 4
+    code_folding: hide
     highlight: pygments
 ---
 
@@ -24,33 +25,11 @@ sanitizeRSession <- function(s){
 }
 oldSessionInfo <- sessionInfo
 sessionInfo <- function(){sanitizeRSession(s = oldSessionInfo())}
-
-# from SO user DeanK: https://stackoverflow.com/a/18672268
-tn = local({
-  i = 0
-  function(x) {
-    i <<- i + 1
-    paste('\n\n:Table ', i, ': ', x, sep = '')
-    # The : before Table tells pandoc to wrap your caption in <caption></caption>
-  }
-})
-knitr::knit_hooks$set(tab_cap = function(before, options, envir) {
-  if(!before)
-    tn(options$tab_cap)
-})
-default_output_hook = knitr::knit_hooks$get("output")
-knitr::knit_hooks$set(output = function(x, options) {
-  if (is.null(options$tab_cap) == F)
-    x
-  else
-    default_output_hook(x,options)
-})
 ```
 
 ```{r, message = FALSE}
 library(tidyverse)
 library(magrittr)
-library(pander)
 ```
 
 Convenience functions:
@@ -73,6 +52,11 @@ kbl_rename <- function(x){
   colnames(x) <- sub("phylop_allbr", "All branches", colnames(x))
   colnames(x) <- sub("browser_phylop_allbr", "All branches (browser)", colnames(x))
   return(x)
+}
+
+kbl_styl <- function(x, ..., caption){
+  knitr::kable(x, caption = caption, format = "html") %>%
+  kableExtra::kable_styling(full_width = FALSE, position = "left", ...)
 }
 ```
 
@@ -159,12 +143,12 @@ ggsave(plot = br_allbr_hist + scale_y_continuous(breaks = seq(0, 200, 50)) + coo
 
 #### phastCons Elements
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isConsEl) %>%
-  summarize_each(funs(mean, sem), starts_with('browser_phylop_allbr')) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -173,12 +157,12 @@ br_allbr_hist + facet_wrap(~isConsEl, labeller = label_both)
 
 #### Coding sequences
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isCDS) %>%
-  summarize_each(funs(mean, sem), starts_with('browser_phylop_allbr')) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -187,12 +171,12 @@ br_allbr_hist + facet_wrap(~isCDS, labeller = label_both)
 
 #### UTRs
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isUTR) %>%
-  summarize_each(funs(mean, sem), starts_with('browser_phylop_allbr')) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -201,12 +185,12 @@ br_allbr_hist + facet_wrap(~isUTR, labeller = label_both)
 
 #### Introns
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isIntron) %>%
-  summarize_each(funs(mean, sem), starts_with('browser_phylop_allbr')) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -215,12 +199,12 @@ br_allbr_hist + facet_wrap(~isIntron, labeller = label_both)
 
 #### Intergenic
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isIntergenic) %>%
-  summarize_each(funs(mean, sem), starts_with('browser_phylop_allbr')) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -278,12 +262,12 @@ subtreescores <- ggplot(
 
 #### phastCons Elements
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isConsEl) %>%
-  summarize_each(funs(mean, sem), starts_with('phylop_d')) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -292,12 +276,12 @@ subtreescores + facet_grid(isConsEl~branch, labeller = label_both)
 
 #### Coding sequences
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isCDS) %>%
-  summarize_each(funs(mean, sem), starts_with('phylop_d')) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -306,12 +290,12 @@ subtreescores + facet_grid(isCDS~branch, labeller = label_both)
 
 #### UTRs
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isUTR) %>%
-  summarize_each(funs(mean, sem), starts_with('phylop_d')) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -320,12 +304,12 @@ subtreescores + facet_grid(isUTR~branch, labeller = label_both)
 
 #### Introns
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isIntron) %>%
-  summarize_each(funs(mean, sem), starts_with('phylop_d')) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -334,12 +318,12 @@ subtreescores + facet_grid(isIntron~branch, labeller = label_both)
 
 #### Intergenic
 
-```{r, tab_cap = "PhyloP scores"}
+```{r}
 scores %>%
   group_by(isIntergenic) %>%
-  summarize_each(funs(mean, sem), starts_with('phylop_d')) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
   kbl_rename() %>%
-  knitr::kable()
+  kbl_styl(caption = "PhyloP scores")
 ```
 
 ```{r}
@@ -363,12 +347,12 @@ sig_accel_counts <- scores %>%
   )
 ```
 
-```{r, tab_cap = "Accelerated counts"}
-knitr::kable(sig_accel_counts)
+```{r}
+kbl_styl(sig_accel_counts, caption = "Counts of accelerated sites")
 ```
 
 ```{r pander-f-chunk}
-pander(ftable(xtabs(n ~ ., sig_accel_counts)), style = "rmarkdown")
+pander::pander(ftable(xtabs(n ~ ., sig_accel_counts)), style = "rmarkdown")
 ```
 
 # Feature-type PhyloP tests
@@ -393,7 +377,7 @@ ftr_tbl %>% select(
 )
 ```
 
-```{r per-feature-p-chunk, tab_cap = "phyloP P-values", message = FALSE}
+```{r per-feature-p-chunk, message = FALSE}
 ftr_tbl %>%
   select(Branch, FeatureType, pval) %>%
   spread(Branch, pval) %>%
@@ -402,13 +386,14 @@ ftr_tbl %>%
     `D. mel` = dm6,
     `D. sim` = droSim1
   ) %>%
-  knitr::kable()
+  kbl_styl(caption = "phyloP P-values" )
 ```
 
 # Whole-region all-branches conservation test
 
-```{bash}
-column -t reg_3.7/phylop/allbr-phylop27-wholeregion-con.tsv
+```{r}
+read_tsv("reg_3.7/phylop/allbr-phylop27-wholeregion-con.tsv") %>%
+  kbl_styl(caption = "PhyloP test for conservation")
 ```
 
 
