@@ -1,0 +1,694 @@
+a score=1163640.000000
+s dm6.chr2L                      11113061  76 + 23513712 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTAAA------CC-------------AAAAGCTAA------AGCCGTGT--CCGTGACGTCACAG------GC
+s droSim1.chr2L                  10912611  76 + 22036055 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTAAA------CC-------------AAAAGCTAA------AGCCGTGG--CCGTGACGTCACGG------GC
+s droSec1.super_3                 6514380  76 +  7220098 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGCCGG-------AGTGAGCTAAA------CC-------------AAAAGCTAA------AGCCGTGG--CCGTGACGTCACGG------GC
+s droYak3.chr2L                   7508998  76 + 22324452 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTAAA------CC-------------AAAAGCTAA------AGCCGTGG--CCGTGACGTCACGG------GC
+s droEre2.scaffold_4929          12309748  75 - 26641161 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTAAA------CC-------------AAAAGCTAA------AGCCGT-G--CCGTGACGTCACGG------GC
+s droBia2.KB462833                7576728  70 -  9561034 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------GGTGAGCTAAC------CC-------------AAAAGCTGA------AGCCGT--------GACGTCACAG------GC
+s droSuz1.KI419149               20990461  70 + 22559587 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTAAC------CC-------------AAAAGCTAA------AGCCGT--------GACGTCACAG------GC
+s droAna3.scaffold_12916         12237834 116 + 16180835 CTCA------TCCCCCGGCTTGGCG-------------------------CTGTCC----------------------TGCCC----ACACGCCTACATATTCTCGCTCTCTCTGCTCTCAGTA--TCTG-TATCTGTCGT------------TCTAAG------CC-------------GAAAGCTTA------AGTTGT--------GACGTCACGG------GA
+s droBip2.KB464412                 581672 118 +  1192065 CTCA-------CCCCCGACTTCGCG-------------------------CTGTCC----------------------TGCCC-ACGACAGGGCATTATTATCTCGCTCTCTCTGCTCTCAGTG--TCTG-TATCTGTCGT------------TCTAAG------CC-------------GAAAGCTTA------AGTCGT--------GACGTCACGG------GA
+s droEug2.KB464674                 547217  68 +  1036559 CCTA------TCTCTCGGC------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTAAA------CC-------------GAAAGCTAA------AGCCGT--------GACGTCA--G------GC
+s droEle2.KB458284                 293955  84 -   694708 CCTATCTCTATCTCTCggt------------------------------------------------------------------------------------------------------gtgtatctg-tatctgtcgG-------AGTGAGCTCAACCTCAGCC-------------GAAAGCTAA------AGCCGT--------GACGTCACAG------GC
+s droKik2.KB459867                 339684 143 +  1161901 ccac------tctcccactccctcttccta--------ccccacc--tccctgtcccactccgcccaTTCTCTTCGTGTGCTTGGTGACGCACTGACTCTCTCC-----------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTTAG------CC-------------GTAAGCTAA------AGCCGT--------GACGTCACAG--------
+s droTak2.KB461482                  26908  70 -    73846 CCTA------TCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTAAA------CC-------------AAAAGCTAA------GGCCGT--------GACGTCACAG------GC
+s droRho2.KB451665                  36986  76 +    84275 CCTATCTCTATCTCTCGGT------------------------------------------------------------------------------------------------------GTG--TCTG-TATCTGTCGG-------AGTGAGCTCAG------CC-------------GAAAGCTAA------AGCCGT--------GACGTCACAG------GC
+s droFic2.KB457561                 601817  95 +   912194 CCTA------TCTTTCAAT--CTCTCCGCT--------CCGCCTT--TCTCTATCT-----------------------------------------------------------------ATA--TCTG-TATCCGCCGG-------AGTGTGCTAAG------CC-------------GAAAGCTAA------AGCCGT--------GACGTCACTG------GT
+s droPse3.chr4_CH379060_3_random  6459927  85 + 11685562 cgtg------tgtct----------------------------------------------------------------------------------------------------------gta--tctgttgcCCGCCGT-------GCTGGGCAGGG------CCGTGCAGGGCTTACAAGAGCCCT------CACCGT-G--TCGTGACGTCACAG------AA
+s droPer1.super_1                 7955170  85 + 10282868 CGTG------TGTCT----------------------------------------------------------------------------------------------------------GTA--TCTGTTGCCCGCCGT-------GCTGGGCAGGG------CCGTGCAGGGCTTAGAAAAGCCCT------CACCGT-G--TCGTGACGTCACAG------AA
+s droMir2.chr4                   22467613  85 + 28826359 CGTT------TGTCT----------------------------------------------------------------------------------------------------------GTA--TCTGTTGCCCGCCGT-------GCTGGGCAGGG------CCGTGCAGGGCTTAGAAGAGCCCT------CACCGT-G--TCGTGACGTCACAG------AA
+s droWil2.CH964274                 421366 118 -  1035393 GTGT------TGTTCCGATTGAATGATGCTGATAAGAGCCGCCCCAAACGCGGTAT-----------------------------------------------------------------GTG--TCTG-TATCTGTTGCCC-----GTTGGGCTAAA------CG---------------ACGCTGACCCAGCGGCCTT-G--TCCTGACGTCACAG------AC
+s droVir3.scaffold_12963         12291354  77 - 20206255 G-------------------------------------------------------------------------------------------------------------------------TG--TCTG-TATCTgttgccgttgccgttgccgttgg------cc-------------gttgACCAC------GGCCTT-GTCTCGTGACGTCACAGgcagcagc
+s droAlb1.JH856939                  31740  73 +    45557 GGCA------T--------------------------------------------------------------------------------------------------------------CTG--tctg-tatct-ctgtatctgttgttgccgttgg------cC-------------GTTGACCAC------GGCCTT-G--TCGTGACGTcacag------cc
+s droGri2.scaffold_15252          6204237  60 - 17193109 ACTG------T--------------------------------------------------------------------------------------------------------------GTG--TCTG-TATCT------------GTTGCCATTGC------CC-------------GTTGACCAC------GGCCTT-G--TCGTGACGTCAGAG--------
+
+a score=-3621.000000
+s dm6.chr2L                      11113137 5 + 23513712 A-GTGC
+s droSim1.chr2L                  10912687 5 + 22036055 A-GTGC
+s droSec1.super_3                 6514456 5 +  7220098 A-GTGC
+s droYak3.chr2L                   7509074 5 + 22324452 A-GTGC
+s droEre2.scaffold_4929          12309823 5 - 26641161 A-GTGC
+s droBia2.KB462833                7576798 5 -  9561034 A-GTAG
+s droSuz1.KI419149               20990531 6 + 22559587 AGGGGG
+s droAna3.scaffold_12916         12237950 5 + 16180835 A-TTGA
+s droBip2.KB464412                 581790 5 +  1192065 A-GAGA
+s droEug2.KB464674                 547285 5 +  1036559 A-GTGG
+s droEle2.KB458284                 294039 5 -   694708 A-ATGG
+s droTak2.KB461482                  26978 5 -    73846 A-TTAC
+s droRho2.KB451665                  37062 5 +    84275 A-ATGG
+s droFic2.KB457561                 601912 6 +   912194 AAATAG
+s droPse3.chr4_CH379060_3_random  6460012 5 + 11685562 G-CTGC
+s droPer1.super_1                 7955255 5 + 10282868 G-CTGC
+s droMir2.chr4                   22467698 5 + 28826359 G-CTGC
+s droVir3.scaffold_12963         12291431 5 - 20206255 a-gagc
+s droAlb1.JH856939                  31813 5 +    45557 a-aagc
+s droGri2.scaffold_15252          6204297 5 - 17193109 C-Aagc
+
+a score=-13088.000000
+s dm6.chr2L              11113142 19 + 23513712 GTCACAGTGGG---------TTC------AGTTG
+s droSim1.chr2L          10912692 19 + 22036055 GCCACAGTGGG---------TTC------AGTTG
+s droSec1.super_3         6514461 19 +  7220098 GTCACAGTGGG---------TTC------AGTTG
+s droYak3.chr2L           7509079 19 + 22324452 GTCACAGTGGG---------TTC------AGTTG
+s droEre2.scaffold_4929  12309828 19 - 26641161 GTCACAGTGGG---------TTT------AGTTG
+s droBia2.KB462833        7576803 18 -  9561034 CACACAGTGGG---------TTC-------GCTG
+s droSuz1.KI419149       20990537 18 + 22559587 CATACAGTGGG---------TCC-------GCTA
+s droAna3.scaffold_12916 12237955 14 + 16180835 ATCACAGTGG--------------------GTCA
+s droBip2.KB464412         581795 14 +  1192065 ATCACAGTGG--------------------GACA
+s droEug2.KB464674         547290 19 +  1036559 CGCACGGTGGG---------TCA------AGTAG
+s droEle2.KB458284         294044 19 -   694708 CACACAGTGGG---------TCA------AGTGG
+s droKik2.KB459867         339827 26 +  1161901 --CACGGTGGAGATTTTCTTTCT------AGGTA
+s droTak2.KB461482          26983 25 -    73846 CACACAGTGGG---------TCCATTATCATTAG
+s droRho2.KB451665          37067 19 +    84275 CACACAGTGGG---------TCA------AGTGG
+s droFic2.KB457561         601918 19 +   912194 CACACAGTGGG---------TCA------AGTAG
+s droVir3.scaffold_12963 12291445 10 - 20206255 gcagcagcag------------------------
+s droAlb1.JH856939          31828 10 +    45557 gccgcagtag------------------------
+s droGri2.scaffold_15252  6204312 10 - 17193109 gcagaggcag------------------------
+
+a score=-14688.000000
+s dm6.chr2L              11113161  8 + 23513712 GA-ACACA--A
+s droSim1.chr2L          10912711  8 + 22036055 GA-GCACA--A
+s droSec1.super_3         6514480  8 +  7220098 GA-GCACA--A
+s droYak3.chr2L           7509098  8 + 22324452 AA-GCACA--A
+s droEre2.scaffold_4929  12309847  8 - 26641161 AA-GCACA--A
+s droBia2.KB462833        7576821  8 -  9561034 CA-GTACA--A
+s droSuz1.KI419149       20990555  9 + 22559587 CAGGCTCA--A
+s droAna3.scaffold_12916 12237969  8 + 16180835 AA-GGGta--a
+s droBip2.KB464412         581809  5 +  1192065 AA-cgg-----
+s droEug2.KB464674         547309  8 +  1036559 AA-AATGA--A
+s droEle2.KB458284         294063  8 -   694708 AA-GTACC--A
+s droKik2.KB459867         339853  9 +  1161901 TACggaaa--a
+s droTak2.KB461482          27008  8 -    73846 AA-GCACA--A
+s droRho2.KB451665          37086  8 +    84275 AT-GCACT--A
+s droFic2.KB457561         601937 10 +   912194 AA-GAACAGTA
+s droVir3.scaffold_12963 12291475  5 - 20206255 ----agca--a
+s droGri2.scaffold_15252  6204325  8 - 17193109 ca-gagca--a
+
+a score=-71495.000000
+s dm6.chr2L              11113169 29 + 23513712 AGTCAT-GCTTAAC-CCA---------AGAGAT-------------GAAATGA
+s droSim1.chr2L          10912719 33 + 22036055 AGTCAT-GCTTAAC-CCG---------AGAGAT---------ATGGGAAATGA
+s droSec1.super_3         6514488 33 +  7220098 AGTCAT-GCTTAGC-CCA---------AGAGAT---------ATGGGAAATGA
+s droYak3.chr2L           7509106 32 + 22324452 AGTCAT-GCTTAAC-CCA---------AGAAGG---------CAGTCGAAAG-
+s droEre2.scaffold_4929  12309855 32 - 26641161 AGTCAT-GCTTAAC-TCA---------GGAACG---------CCGTCGAATG-
+s droBia2.KB462833        7576829 43 -  9561034 AGCCACGGCTTAAC-CTT---------ATGCTTTAAGAAAATTGGCAAAATTA
+s droSuz1.KI419149       20990564 30 + 22559587 AGCCAC-GCTTAAcactt---------aaactt-------------aaaatta
+s droAna3.scaffold_12916 12237977 13 + 16180835 aaatat-tc---------------------------------------aatca
+s droBip2.KB464412         581814 33 +  1192065 -aatat-tttaaat-cct---------gatttt--------tgttttgaaccG
+s droEug2.KB464674         547317 34 +  1036559 TCTCAT-TCCTAAC-CAA---------ATCCAT--------TTTATGAGTTGA
+s droEle2.KB458284         294071 33 -   694708 AGTCAT-GCTTAAC-CTT---------TGAACT---------CTGCTGAATGA
+s droKik2.KB459867         339862 34 +  1161901 aaatat-tcctaCA-TCACTT---AT-AGAAAT-------------AAAACtc
+s droTak2.KB461482          27016 42 -    73846 AGCCAC-GCTTGAA-CTTCGTCgaataaaaacg---------ttttaaaaata
+s droRho2.KB451665          37094 32 +    84275 AGTCAC-GCTTAAC-CTT---------TGAACT----------TGTTGAATGA
+s droFic2.KB457561         601947 28 +   912194 GGACAA-GCTTTAC-TTT---------TAAGCT---------AGGtaa-----
+s droVir3.scaffold_12963 12291495 29 - 20206255 ACACAA-TCTCCCC-Caa---------aaaaaa-------------aaaatat
+
+a score=-60513.000000
+s dm6.chr2L              11113198 13 + 23513712 AAATGTTT-----------------------------CCAAT---------------
+s droSim1.chr2L          10912752 13 + 22036055 AAATGTTT-----------------------------GCATT---------------
+s droSec1.super_3         6514521 13 +  7220098 AAATGATT-----------------------------CCATT---------------
+s droYak3.chr2L           7509138 13 + 22324452 AAATGGTT-----------------------------TTGTT---------------
+s droEre2.scaffold_4929  12309887 13 - 26641161 AAATGATT-----------------------------TTGTT---------------
+s droBia2.KB462833        7576872 13 -  9561034 aagcttaa-----------------------------taaaa---------------
+s droSuz1.KI419149       20990594 13 + 22559587 aagttagt-----------------------------GATTT---------------
+s droAna3.scaffold_12916 12237990  4 + 16180835 aaat-----------------------------------------------------
+s droBip2.KB464412         581847  4 +  1192065 GGAC-----------------------------------------------------
+s droEug2.KB464674         547351 10 +  1036559 GAAT---T-----------------------------gctaa---------------
+s droEle2.KB458284         294104 11 -   694708 AAACGTCT-----------------------------AAT-----------------
+s droKik2.KB459867         339896 13 +  1161901 aagtgttt-----------------------------tttta---------------
+s droTak2.KB461482          27058 13 -    73846 taatattt-----------------------------aaata---------------
+s droRho2.KB451665          37126 42 +    84275 AAACGTTTTATAAACCAGCGacttatgaaataaataaatatt---------------
+s droFic2.KB457561         602179 13 +   912194 AAATATTC-----------------------------CCCCT---------------
+s droVir3.scaffold_12963 12291548 28 - 20206255 GACTATTT-----------------------------TCGGAACACCGAAAACTAAA
+
+a score=-879392.000000
+s dm6.chr2L              11113211 149 + 23513712 TA-----------------------------------------TCCATTAAA--------------------------------ACCTTTAATAGT---------TTAACTAATAAAACATG-----------TTAAAAT---------TATTTT---AAAATAC-----------ACTGATTTAAGCTGACAACTA--------------------------------------------------ACTAAACTTTATGACAGTAAAG-CTTATAGCCAGTATATCA----TTA---------------T------------------ACCATT-AAAAAAATCA-TTTTTG------------------------------------------------------------------------------------AC
+s droSim1.chr2L          10912765 130 + 22036055 TAA-------------------CCCTTTATACTTTTCT---CACCCATTAAA--------------------------------ACATTTAATAGT---------TTAACTAATAAAACATG-----------TTAACAT---------TTTTTT---ATAA----------------------------------------------------------------------------------------TAACTTTCCAGT----TCG-CT---------TAAATCA----TTA---------------T------------------ATCATTAAAAAATATCATTTTTTT------------------------------------------------------------------------------------AA
+s droSec1.super_3         6514534 156 +  7220098 AAA-------------------CCATGTCTACTTTTCT---CTCTCATTAAA--------------------------------ACATTTAATAGT---------TTAACTAATAAAACATG-----------TTAAAAT---------TATTTT---ATAAAAC-----------TCTGATTTAAGCTGAAAACTA--------------------------------------------------ACTAAACTTCCTAGT----ACG-Ct---------taaatta----tta---------------t------------------atcatt-aaaaatataattttttG------------------------------------------------------------------------------------AC
+s droYak3.chr2L           7509151 190 + 22324452 AAg-------------------ccatttcctttttttt---atccAATTAAA--------------------------------TCACTTTTAGGt---------ggaacaaataaaaaaaa-----------gttaaaa---------ttttta---ataatac-----------tCTGAATCACgctgaaaaatattttg--------catca--------------------------CTAGGCACtaaa---cattaa----aaactttaaagacagtttatta----ttt---------------t-----gctttac--cctcatcatt-aaaaattcaattttttg------------------------------------------------------------------------------------ac
+s droEre2.scaffold_4929  12309900 219 - 26641161 AAACATCGTTCTCCAGCATTTTCCATGTACACTTTTTT---CTCAAATTAAAATGA------AAG------------------GTAATATAAAGGT---------TG---ACATATTAAACA-----------TTTAAAA---------AATATACTTATAATAC-----------TCAAATTTAGGCTGGAAATGACTTTG--------TATCA--------------------------TTAGGCACTAAATTGTATTAC----ACA-TCCCAGTTCGGTATAGTT----TTT---------------C-----GTGTAGC--CTTAGCCGTA-CAAAACTACGTTCTTCG------------------------------------------------------------------------------------AC
+s droBia2.KB462833        7576885 288 -  9561034 taata-----------------ccatCCCTAACTTA-------GGGATCAAA-----------------------------------CTTAAGTGT---------TGCGCTTATAAGGGAag-----------ttaaaag---------tattt----ataag----------------------atctgaaaaaatatatg--------tatagatTGATGATAGATAGATGA-------TACGGTAGTtaaaggtaaaataataatg-tctaaa-----taaataa----ttaaaatccttgaa----t-----aaaaaGC--CCTTCCAAct-gaagatttatttttaagtttttaaagcttGAATCATTAATATATGAACAGGTCTAGATCGATTTTAGCCGGTTTAAAtactttcaatttaaaacagTATATAC
+s droSuz1.KI419149       20990607 215 + 22559587 TAATA-----------------CAATCC-------------------TTAAA-----------------------------------CCAAAGTGT---------TGGGTACAtatgaaaag-----------ttaaaaa---------ttatt----ataag-t-----------tCTGAAGAagattgttaaattaaatg---------gtAG-TTTAGGTAAAAccgttaattttttttaaactaatcaATTGAATCCCacccatt-tttaaa-----taaataaaacttgagGTTTCTTGAAGCCGT-----acttaat--acttttaa---aaaaaataa-----aag-----------------------------------------------------------------------------gatgtatgc
+s droAna3.scaffold_12916 12237994  81 + 16180835 -------------------------------------------aaaatcaaa--------------------------------taaattaaaaat---------------taaacgatggt-----------tttta-----------ttttta---aaaa----------------------------------------------------------------------------------------------------------a-tt------------aaca----ttt---------------t------------------ataaaG-CGAGGAAAAAACTTT--------------------------------------------------------------------------------------AT
+s droBip2.KB464412         581851 123 +  1192065 -------------------------------------------AAAATTAAG--------------------------------CTACATATAAGTATGTATTTTTTCGCACAAATGGTAAG-----------TTTCAAACGAATTGTCTTTtcg---aaaat------------------------------------------------------------------------------------aacaa--------------ata-tt------------acca----tat---------------t--------------ccagataata-tataaaaaaatctttaa----------------------------------------------------------------------------------aaat
+s droEug2.KB464674         547361  81 +  1036559 taa----------------------------------------tttattaac---------------------------------aatttaattgt--------------CCATAAGAAATA-----------TCTTA-----------TATTCT---GAAA--------------------------------------------------------------------------------------------------------AGA------------------A----TTC---------------T------------------AATATA-AAAATcgtaatctttaa--------------------------------------------------------------------------------------
+s droEle2.KB458284         294323 170 -   694708 ---------------------------------------------TATCCCA--------------------------------TAACTCTAACTT---------CTCATACCCGAAGgcta-----------ataaata---------tgttat---ctACATC-----------TATGGTTAAATTTACTGacctttata--------tatatatttc---------------------ttaagttgtgaa-------------aag-ttttctttaagcctacta----ctt---------------ttaattaaaaaat--ttaaataatc-aaaaaaaaaattttttt------------------------------------------------------------------------------------aa
+s droKik2.KB459867         339910 142 +  1161901 ---------------------------------------------tattagaagAGCTCCCTAAGTCATac-----------tattatttgatttt---------tatatctatatgcattt-----------tttagct---------taataa---ataaagt-----------ttttatgaGTTATTGTAA------------------------------------------------------------------------AAG-GCTGAAGTCAAAAATTTG----TTA---------------T--------------GCTTGCATtc-ataaatttcaac-------------------------------------------------------------------------------------------
+s droTak2.KB461482          27079 148 -    73846 -------------------------------------------------------------------------------------taattatttat---------actattcttaaaCTAAG-----------TGGAGAG---------TATCTA---GTA---------------TCTGATAAGGAttattaaatgcaata------atagTTC--------------------------AGgggaaacaaa-------------taa-tttagataCCATGCATCA----TCT---------------T---------AACTGCcagtttttc-ataaataaaattattaa------------------------------------------------------------------------------------aa
+s droRho2.KB451665          37174 212 +    84275 -----------------------------CATACTGATAGGATTTAATAGAA--------------------------------TTATTAAACTGA---------AACATTCCTAAGGCGAATTTTTTCCAACTTTACCT---------TACTTC---ATAATTTGT-----AGGGCATtgttctttttaataattacacGCAAA---ACTAAGCATCCATAGAAGTCATTTTTTATCATTATAAGTAATGAACTATC--------AGA-TC---------TATCTTA----TTT---------------A--------------GCATGCCATA-AACATTACCGTTTTAAA------------------------------------------------------------------------------------C-
+s droFic2.KB457561         602192 160 +   912194 --------------------------------------------------------------------TACGC------AGATACAAATATAATGT---------TGgtcatataaaaaaac---------atataaaat---------ggTCAC---ATAAAATGGTCACATAATAATGGTCACTTATAAGAATTCATCTGCCCTTTCTTTGGG---------------------------------------------------AAA-TTCAGACATAATAAGAAa----cta---------------t-------------------ttaat-caaaatataattttcca------------------------------------------------------------------------------------tC
+s droVir3.scaffold_12963 12291576 154 - 20206255 --------------------------------------------------------------------TACTCTTCAAGGCATGTGGCTTAGAAAT---------TG-GCCAACAAAACGGG-----------TTTGAAA---------CAAATC---GAAATGG-----------CGTAATTTCGAATCGAAACGGCTTGA--------GGCGC---------------------------------------------------AAT-TTTCAGTATAATCAGTTC----TCC---------------G-----AACCGAAACCGGAACCAAA-ACAAAAACCTTTTTC----------------------------------------------------------------------------------------
+
+a score=-65550.000000
+s dm6.chr2L              11113360  59 + 23513712 TGAAGAATTCGTGTCAAGTCT-----------------------------------------------------------GTCTCCTA----AGCTTCCTGCGAACGATTTCCTT---CCTCGAC----
+s droSim1.chr2L          10912895  59 + 22036055 TGAAGAATTCGCGGCAAGTCT-----------------------------------------------------------GTTTCCTA----AGCTTCCGGCGAACGATTTCCTT---CCTCGAC----
+s droSec1.super_3         6514690  56 +  7220098 TGAAGAAT---CGGCAAGTCT-----------------------------------------------------------GTTTCCTA----AGCTTCCGGCGAACGATTTCCTT---CCTCGAC----
+s droYak3.chr2L           7509341  59 + 22324452 TGAAGAATTCGCGGCAAGTCT-----------------------------------------------------------GTTTCTTA----CGTTTCCGGCGAACGATTTCCTG---ACTCGGC----
+s droEre2.scaffold_4929  12310119  59 - 26641161 TGAAGAATTCGCGGCAAGTCT-----------------------------------------------------------GTTTCTTA----CGTTTCCGGCGAGCGATTTTCTA---ACTCGAC----
+s droBia2.KB462833        7577173  58 -  9561034 TAAGGTATTCGTggtggattt------------------------------------------------------------tatttta----aatttccaaaggTCAATTCTTGG---ATTTGAC----
+s droSuz1.KI419149       20990822  57 + 22559587 taaagaattcgcgtttaattt------------------------------------------------------------tctttt-----catttccaGAGGTCACTTTCTTG---AATTGAC----
+s droAna3.scaffold_12916 12238075  33 + 16180835 TTATAAATTTAA--------------------------------------------------------------------------------------------TCAATTTTTGTGTGCCTTGTT----
+s droBip2.KB464412         581974  36 +  1192065 ataaaaaactaaataaaat-------------------------------------------------------------------------------------acaaattttgt----tttttc----
+s droEug2.KB464674         547442  61 +  1036559 --aaaaattcagtttttattt-----------------------------------------------------------tttacatatattagTTCCCAGAGGTCAATCTCCTG---ATTTGAC----
+s droEle2.KB458284         294493  48 -   694708 ccaagAACTTGT-CCATGT-------------------------------------------------------------------------AtttttttGAGGtaaattttccg---attttcc----
+s droTak2.KB461482          27230  46 -    73846 --aaaaataca----------------------------------------------------------------------ttttttg----tatgtcCATAGGTTAATTTCCAG---TCTTGAC----
+s droRho2.KB451665          37393 118 +    84275 TTTTGAGATTGTGACAAGTTTCATTAAAATAGTCTACTTTGTTTTACGGAATTCAAATAATCAAACAAATCTCCAAagaatttttgta----gttttatatgGGTCTATTTCTAG---ACTCGAC----
+s droFic2.KB457561         602368  35 +   912194 ------------TGGATAttt-----------------------------------------------------------ttttccta----gtttt-----aattaatttttag--------------
+s droVir3.scaffold_12963 12291730  54 - 20206255 TTTAAAATACGT-AAAAGCTT-----------------------------------------------------------------------ATGTACAAAAACTCAGTTTTTTT---AACTGATTCTT
+
+a score=138509.000000
+s dm6.chr2L              11113419 20 + 23513712 CCACAGTGAGGC-GTGTGCCG
+s droSim1.chr2L          10912954 20 + 22036055 CCACAGTGAGGC-GTGTGCCG
+s droSec1.super_3         6514746 20 +  7220098 CCACAGTGAGGC-GTGTGCCG
+s droYak3.chr2L           7509400 20 + 22324452 CCACAGTGAGGC-TTGTGCCG
+s droEre2.scaffold_4929  12310178 20 - 26641161 CCACAGTGAGGC-GTGTGCCG
+s droBia2.KB462833        7577231 20 -  9561034 CCACAGTAAGGC-GTGTGCCG
+s droSuz1.KI419149       20990879 20 + 22559587 CCACAGTGAGGC-GTGTGCCG
+s droAna3.scaffold_12916 12238108 20 + 16180835 CTACTGTGGGGC-GGGTGCCA
+s droBip2.KB464412         582010 21 +  1192065 ctacTGTGTGGCGGGGCTTCA
+s droEug2.KB464674         547503 20 +  1036559 CCACAGTGAGGC-GTGTGCCA
+s droEle2.KB458284         294541 20 -   694708 ccACAGTGTGGC-ATGTGCCC
+s droKik2.KB459867         340097 20 +  1161901 CCATTGTGAGTC-GTGTGCCA
+s droTak2.KB461482          27276 20 -    73846 CCACAGTGAGGC-GTGGGCCG
+s droRho2.KB451665          37511 20 +    84275 CCACAGTGTGGC-ATGTGCCC
+s droFic2.KB457561         602403 20 +   912194 ccACAGTGCGGC-GTGTGCCG
+s droVir3.scaffold_12963 12291784 20 - 20206255 CCAAATTCACGA-GTGGCCTG
+
+a score=5667.000000
+s dm6.chr2L              11113439 1 + 23513712 A
+s droSim1.chr2L          10912974 1 + 22036055 A
+s droSec1.super_3         6514766 1 +  7220098 A
+s droYak3.chr2L           7509420 1 + 22324452 A
+s droEre2.scaffold_4929  12310198 1 - 26641161 A
+s droBia2.KB462833        7577251 1 -  9561034 A
+s droSuz1.KI419149       20990899 1 + 22559587 A
+s droAna3.scaffold_12916 12238128 1 + 16180835 A
+s droBip2.KB464412         582031 1 +  1192065 A
+s droEug2.KB464674         547523 1 +  1036559 C
+s droEle2.KB458284         294561 1 -   694708 G
+s droKik2.KB459867         340117 1 +  1161901 A
+s droTak2.KB461482          27296 1 -    73846 A
+s droRho2.KB451665          37531 1 +    84275 G
+s droWil2.CH964274         421545 1 -  1035393 A
+s droVir3.scaffold_12963 12291804 1 - 20206255 A
+s droAlb1.JH856939          31907 1 +    45557 a
+
+a score=242109.000000
+s dm6.chr2L              11113440 44 + 23513712 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGTCACGAG--TC----TCT
+s droSim1.chr2L          10912975 44 + 22036055 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGTCACGAG--TC----TCT
+s droSec1.super_3         6514767 44 +  7220098 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGTCACGAG--TC----TCT
+s droYak3.chr2L           7509421 44 + 22324452 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGTCACGAG--TC----TCT
+s droEre2.scaffold_4929  12310199 44 - 26641161 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGTCACGAG--TC----TCT
+s droBia2.KB462833        7577252 44 -  9561034 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGCTATTAG--TC----TCT
+s droSuz1.KI419149       20990900 46 + 22559587 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGCTATTAGTCTC----TCT
+s droAna3.scaffold_12916 12238129 50 + 16180835 AAGCAACAGTGTGCCC--GTTAAGCACTCTC---------TCCTGCTTTCAC--TCCCATTCT
+s droBip2.KB464412         582032 48 +  1192065 AAGCAACAGCGTGCCC--GTTAAGCA--CTC---------TCCTGCTTTCGC--TCAAGTTCT
+s droEug2.KB464674         547524 41 +  1036559 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTGGGT---GG--AA----TCT
+s droEle2.KB458284         294562 44 -   694708 AAGCAACAGCGTGCCC--GTTTGGCA--CTC---------TCTTTCTATCAC--TC----TCT
+s droKik2.KB459867         340118 46 +  1161901 AAGCAACAGCGTGCCCATGTTCAGga--ctc---------tctcgctctcac--tC----TTC
+s droTak2.KB461482          27297 44 -    73846 AAGCAACAGCGTGCCC--GTTTAGCA--CTC---------TCTCGCTATTAG--TC----TCT
+s droRho2.KB451665          37532 44 +    84275 AAGCAACAGCGTGCCC--GTTTGGCA--CTC---------TCTCTCTGAATC--AC----TCT
+s droFic2.KB457561         602423 44 +   912194 AAGCAACAGCGTGTCC--GTTTAGCA--CTC---------TCTCGCTatcac--tc----tct
+s droWil2.CH964274         421546 36 -  1035393 AAGCAACAGCGTGCCA--GTTTACCA--GTC---------GTTGTTTCC--------------
+s droVir3.scaffold_12963 12291805 39 - 20206255 TATTAATAGGATTT----GTTTCACA--TGAGAGGAGCATGCTAA------------------
+s droAlb1.JH856939          31908 32 +    45557 cagcaacagcgtGCCA--GTTTCtcc--cca---------acaac------------------
+s droGri2.scaffold_15252  6204338 31 - 17193109 aagcaacagcGTGCCA--GTTTCACA--CAA---------TCTC-------------------
+
+a score=26259.000000
+s dm6.chr2L                      11113484 35 + 23513712 CTC-CCC-AAAAGGT-------AAA-------------G-GAAGTAAAG---------C----------------T-GGGAATG
+s droSim1.chr2L                  10913019 35 + 22036055 CTC-CCC-AAAAGGT-------AAA-------------G-GAAGTAAAG---------C----------------T-GGGAATG
+s droSec1.super_3                 6514811 36 +  7220098 CTC-CCC-AAAAGGT-------AAA-------------G-GAAGTAAAG---------C----------------TGGGGAATG
+s droYak3.chr2L                   7509465 37 + 22324452 CTC-CCCAAAAAGGT-------AAA-------------GTGAAGTAAAG---------C----------------T-GGGAATG
+s droEre2.scaffold_4929          12310243 36 - 26641161 CTC-CCC-AAAAGGT-------AAA-------------GTAAAGTAAAG---------C----------------T-GGGAATG
+s droBia2.KB462833                7577296 31 -  9561034 CCC-CCA-GAAAGGT-------AAA-------------G-----TAAAG---------C----------------T-GGGAATg
+s droSuz1.KI419149               20990946 31 + 22559587 CCC-CCA-AAAAGGT-------AAA-------------G-----TAAAG---------C----------------T-GGGAATg
+s droAna3.scaffold_12916         12238179 39 + 16180835 CCC-CCC-ACGACCTCCACGACCAA-------------G----GTGAAG---------T----------------T-GGGAATG
+s droBip2.KB464412                 582080 32 +  1192065 CCT-CCC-ACGGCTT-------CAT-------------G----GTGAAG---------T----------------A-AGGAATA
+s droEug2.KB464674                 547565 31 +  1036559 CTC-CCT-AAAAGGT-------AAA-------------G-----TAGAG---------C----------------T-GGGAATG
+s droEle2.KB458284                 294606 31 -   694708 CTC-CCC-CAAAGGT-------AAA-------------G-----TAAAG---------C----------------T-GGGaatg
+s droKik2.KB459867                 340164 28 +  1161901 CGC-CCC--AAAGGT-------AAG-------------G-----CGGAG----------------------------GAGATtg
+s droTak2.KB461482                  27341 31 -    73846 CCC-cca-aaaaagt-------aaa-------------g-----taaag---------c----------------t-gggaacg
+s droRho2.KB451665                  37576 31 +    84275 CTC-CCC-CAAAGGT-------AAA-------------G-----TAATG---------C----------------T-GGGAATG
+s droFic2.KB457561                 602467 32 +   912194 ctctccc-cAAAGGT-------AAA-------------G-----AAAAG---------T----------------T-GGGAATG
+s droPse3.chr4_CH379060_3_random  6460686 32 + 11685562 CTA-TCC-AAAATGT-------GGT-------------A----TTACCT---------T----------------T-GACGAGG
+s droPer1.super_1                 7955964 32 + 10282868 CTA-TCC-AAAATGT-------GGT-------------A----TTACCT---------T----------------T-GACGAGG
+s droWil2.CH964274                 421582 44 -  1035393 CTC-CCC-CAAACTA-------AAC-------------A-GGAGaaaaaaaCATGCTCC----------------A-AGGAATG
+s droVir3.scaffold_12963         12291846 64 - 20206255 CCC-GCG-TAGAGAA-------AAACGTTGTTGTACACGAATCATATCG---------CGACCCGATCCGACGTCT-GGAAGG-
+s droAlb1.JH856939                  31942 42 +    45557 ctc-caa-caaaaaa-------aaa-------------aaacaaaaaaa---------caacctag---------a-ggaaat-
+s droGri2.scaffold_15252          6204369 37 - 17193109 CCC-CTa-aaaacaa-------caa-------------aaacaaaaaaa---------taa--------------a-ggaaaa-
+
+a score=-48643.000000
+s dm6.chr2L                      11113519 29 + 23513712 ACACAAAAAAG-AA-AAG--CAACAGCA-----CGA-----GC
+s droSim1.chr2L                  10913054 29 + 22036055 ACACAAAAAAG-GA-AAG--CAACAGCA-----CGA-----GC
+s droSec1.super_3                 6514847 29 +  7220098 ACACAAAAAAG-AA-AAG--CAACAGCC-----CGA-----GC
+s droYak3.chr2L                   7509502 29 + 22324452 acacaaaaaag-ta-aag--caaCAGCA-----CGA-----GC
+s droEre2.scaffold_4929          12310279 29 - 26641161 ACACAAAAAAG-AA-AAG--CAACAGCC-----CGA-----GC
+s droBia2.KB462833                7577327 27 -  9561034 acac-aaaaag--a-aag--caaCAGTC-----CGA-----AC
+s droSuz1.KI419149               20990977 28 + 22559587 acacaaaaaag--a-aag--caacAGCC-----CGA-----AC
+s droAna3.scaffold_12916         12238218 16 + 16180835 GGAAAAATGAA----------------------TGA-----GC
+s droBip2.KB464412                 582112 16 +  1192065 GGAAGCATGAA----------------------TGA-----GC
+s droEug2.KB464674                 547596 30 +  1036559 acacaaaaaaggaa-aag--caacagCA-----CGA-----GC
+s droEle2.KB458284                 294637 30 -   694708 acacaaaaaaa-aatcag--caacAGCC-----CGA-----GA
+s droKik2.KB459867                 340192 25 +  1161901 acaaaacagaa-aa-a-----aagggcA-----CGA------C
+s droTak2.KB461482                  27372 22 -    73846 a-------aaa-aa-aag--caatAGCC-----CGA-----GC
+s droRho2.KB451665                  37607 28 +    84275 ACACaaaaaaa--T-CAG--CAACAGCC-----CAA-----GC
+s droFic2.KB457561                 602499 26 +   912194 AC---AAAAAA-TT-TAG--CAACAGCC-----CGA-----GC
+s droPse3.chr4_CH379060_3_random  6460722 34 + 11685562 ACAAAAAGCAG-TC-ACA--CAAAACCT-----GGAGAGGGGA
+s droPer1.super_1                 7956000 34 + 10282868 ACAAAAAGCAG-TC-ACA--CAAAACCT-----GGAGAGGGGA
+s droMir2.chr4                   22468453 34 + 28826359 ACAAAAAGCAG-TC-ACA--GAAAACCT-----GGAGAGGGGA
+s droWil2.CH964274                 421630 34 -  1035393 ACAAAACGAAG-GG-AGT--CAGCAAATGTTAGCAA-----AC
+s droVir3.scaffold_12963         12291910 27 - 20206255 GTATACAATAT-AG-AAG--TGCCGGCG-----CGC-------
+s droAlb1.JH856939                  31984 29 +    45557 ggagaaaaaaa-aa-acgtttgcCGGCG-----CGC-------
+s droGri2.scaffold_15252          6204406 25 - 17193109 cgagaagaaaa-aa-T----TGCCGGCG-----CGC-------
+
+a score=645849.000000
+s dm6.chr2L                      11113548 35 + 23513712 CGCATT------GAATTGCAATCCCTCATTGGGGGTGG-AAA
+s droSim1.chr2L                  10913083 35 + 22036055 CGCATT------GAATTGCAATCCCTCATTGGGGGTGG-AAA
+s droSec1.super_3                 6514876 35 +  7220098 CGCATT------GAATTGCAATCCCTCATTGGGGGTGG-AAA
+s droYak3.chr2L                   7509531 35 + 22324452 CGCATT------GAATTGCAATCCCTCATTGGGGGTGG-aaa
+s droEre2.scaffold_4929          12310308 35 - 26641161 CGCATT------GAATTGCAATCCCTCATTGGGGGTGG-AAA
+s droBia2.KB462833                7577354 35 -  9561034 CGCATT------GAACTGCAATCCTTCATTGGGGGTGG-AAA
+s droSuz1.KI419149               20991005 35 + 22559587 CGCATT------GAATTGCAATCCCTCACTGGGGGTGG-aaa
+s droAna3.scaffold_12916         12238234 35 + 16180835 TGCTTC------GAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droBip2.KB464412                 582128 35 +  1192065 CGCTTT------AAAGTGCAATCCCTCATAAGgggtgg-aaa
+s droEug2.KB464674                 547626 35 +  1036559 CACATT------GAATTGCAATCCCTCATTGGGGGTGG-AAA
+s droEle2.KB458284                 294667 36 -   694708 CGCTTT------GAATTGCAATCCCTCATTAGGGGTGGAAAA
+s droKik2.KB459867                 340217 35 +  1161901 CACATT------GAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droTak2.KB461482                  27394 35 -    73846 CGAATT------GAATTGCAATCCCTCATTAAGGGTGG-AAA
+s droRho2.KB451665                  37635 35 +    84275 CGCTTC------GAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droFic2.KB457561                 602525 35 +   912194 CGCATG------GAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droPse3.chr4_CH379060_3_random  6460756 35 + 11685562 CACATT------GAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droPer1.super_1                 7956034 35 + 10282868 CACATT------GAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droMir2.chr4                   22468487 35 + 28826359 CACATT------GAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droWil2.CH964274                 422364 35 -  1035393 CGCATC------GAATTGCAATCCCTCATTAAGGGTGG-AAA
+s droVir3.scaffold_12963         12291937 41 - 20206255 CGCATTGATTGAGAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droAlb1.JH856939                  32013 41 +    45557 CGCATTGATTGAGAATTGCAATCCCTCATTAGGGGTGG-AAA
+s droGri2.scaffold_15252          6204431 41 - 17193109 CGCATTGATTGAGAATTGCAATCCCTCATTAGGGGTGG-AAA
+
+a score=20517.000000
+s dm6.chr2L                      11113583 2 + 23513712 AA
+s droSim1.chr2L                  10913118 2 + 22036055 AT
+s droSec1.super_3                 6514911 2 +  7220098 AT
+s droYak3.chr2L                   7509566 2 + 22324452 aa
+s droEre2.scaffold_4929          12310343 2 - 26641161 AA
+s droBia2.KB462833                7577389 2 -  9561034 AA
+s droSuz1.KI419149               20991040 2 + 22559587 aa
+s droAna3.scaffold_12916         12238269 2 + 16180835 CA
+s droBip2.KB464412                 582163 2 +  1192065 aa
+s droEug2.KB464674                 547661 2 +  1036559 AA
+s droEle2.KB458284                 294703 2 -   694708 AA
+s droKik2.KB459867                 340252 2 +  1161901 AA
+s droTak2.KB461482                  27429 2 -    73846 AA
+s droRho2.KB451665                  37670 2 +    84275 AA
+s droFic2.KB457561                 602560 2 +   912194 AG
+s droPse3.chr4_CH379060_3_random  6460791 2 + 11685562 AA
+s droPer1.super_1                 7956069 2 + 10282868 AA
+s droMir2.chr4                   22468522 2 + 28826359 AA
+s droWil2.CH964274                 422399 2 -  1035393 AT
+s droVir3.scaffold_12963         12291978 2 - 20206255 AA
+s droGri2.scaffold_15252          6204472 2 - 17193109 AA
+
+a score=-23488.000000
+s dm6.chr2L                      11113585 10 + 23513712 TACGTGGA--------TG
+s droSim1.chr2L                  10913120 18 + 22036055 AACGTGGATGTGTGTGTG
+s droSec1.super_3                 6514913 10 +  7220098 AACGTGGA--------TG
+s droYak3.chr2L                   7509568 10 + 22324452 aacgtgga--------tg
+s droEre2.scaffold_4929          12310345 10 - 26641161 TACGTGGC--------TG
+s droBia2.KB462833                7577391 10 -  9561034 TACTCAGA--------AG
+s droSuz1.KI419149               20991042 10 + 22559587 aaCATAGA--------TA
+s droAna3.scaffold_12916         12238271 10 + 16180835 TACGAGGG--------GA
+s droBip2.KB464412                 582165 13 +  1192065 taaaagag-----aaaaa
+s droEug2.KB464674                 547663 10 +  1036559 TCCGTAAA--------TA
+s droEle2.KB458284                 294705 10 -   694708 TCCGTAGA--------TA
+s droKik2.KB459867                 340254  8 +  1161901 TATGTTGG----------
+s droTak2.KB461482                  27431 10 -    73846 TTGGTAGA--------TG
+s droRho2.KB451665                  37672 10 +    84275 TACGTACA--------CA
+s droFic2.KB457561                 602562 10 +   912194 TACATGTA--------aa
+s droPse3.chr4_CH379060_3_random  6460793 10 + 11685562 TGTGAGAG--------GC
+s droPer1.super_1                 7956071 10 + 10282868 TGTGAGAG--------GC
+s droMir2.chr4                   22468524 10 + 28826359 TGTGAGAG--------GC
+s droWil2.CH964274                 422401 10 -  1035393 TGTGTGAG--------AC
+s droVir3.scaffold_12963         12291986 10 - 20206255 AACGGGCA--------CG
+
+a score=64831.000000
+s dm6.chr2L                      11113595 57 + 23513712 TGTGTGTGCGA--------A-AT------------GGAGTTTGTCCTTGTGTGGGTGC-T---------------ATG-GGGGCGGAAAAGCGGA
+s droSim1.chr2L                  10913138 57 + 22036055 TGTGTGTGCGA--------A-AT------------GGAGTTTATCCTTGTGTGGGTGC-T---------------ATG-GGGGCGGAAAAGCGGA
+s droSec1.super_3                 6514923 57 +  7220098 TGTGTGTGCGA--------A-AT------------GGAGTTTATCCTTGTGAGGGTGC-T---------------ATG-GGGGCGGAAAAGCGGA
+s droYak3.chr2L                   7509578 65 + 22324452 tgtgtgtgcga--------t-gtgcg---atgtg-gagatgtgtccttgtgtgggtgC-T---------------CAG-ggggcggaaaagcgga
+s droEre2.scaffold_4929          12310355 58 - 26641161 TGTGTGTGCGA--------A-GT------------GGAGTTTGTCCTTGTGTGGGTGC-T---------------TTGAGGGGCGGAAAAGCGGA
+s droBia2.KB462833                7577401 49 -  9561034 TATAGGTTCGA--------A-GT------------GGATGTTGTCCTTGTGTGGGTGC-C---------------TTG-GGG--------GAGGA
+s droSuz1.KI419149               20991052 49 + 22559587 TGTATGTTCAA--------A-GT------------GGAGTTTGTCCTTGTGTGGGTGC-T---------------CTG-GGG--------GCGGA
+s droAna3.scaffold_12916         12238281 46 + 16180835 CTTACACATAA--------TGAT------------TATGTTCGT-GTTATGT-GCTGT-T---------------AAT-AGG----------GGG
+s droBip2.KB464412                 582178 32 +  1192065 attacatttaa--------t-at------------taGCT---------------TGT-T---------------AAG-AGG----------AAG
+s droEug2.KB464674                 547673 49 +  1036559 TGTATGTGCGA--------A-TT------------GATGATGGTCCTTGTCTGGGTGC-G---------------CTG-GGG--------GCGGA
+s droEle2.KB458284                 295134 49 -   694708 TGTATGTGTGA--------A-GT------------ATAGATTGTCCTTGTGTGGGTGC-T---------------GTG-AGG--------GCGGA
+s droKik2.KB459867                 340262 50 +  1161901 CCAGTGTGTGA--------G-TG------------GGAGTACGTGCATGCCTGGGTGCTT---------------CTG-GGG--------GCGCA
+s droTak2.KB461482                  27441 49 -    73846 TGTTTGTGCGA--------A-CT------------GGAGTTTGTCCTTGTGTGGGTGC-T---------------TTG-GTA--------GCGGA
+s droRho2.KB451665                  37690 49 +    84275 TGTATGTGCGA--------A-GT------------GAAGTTTGTCCTTGTGTGGGTGC-T---------------ATG-GGG--------GCGGA
+s droFic2.KB457561                 602580 57 +   912194 tgtatgtatgattGCCAGCA-AG------------AGAGATTGTCCTTGTGTGGGTGA-C---------------TTG-GGG--------GCGGA
+s droPse3.chr4_CH379060_3_random  6460833 76 + 11685562 tatgtatatag--------a-actCTTACATATGcttggtgtgcgtgtgtgtgggtgc-tggTCGCGTGCCTGTGTTG-GGG--------GAGTA
+s droPer1.super_1                 7956103 76 + 10282868 TATGTATATAG--------A-ACTCTTACATATGCTTGGTGTGCGTATGTGTGGGTGC-TGGTCGCGTGCCTGTGTTG-GGG--------GAGTA
+s droMir2.chr4                   22468560 76 + 28826359 tatgtatatag--------a-actCTTACATATGCTtggtgtgcgtgggtgtgggtgc-tgGTCGCGTGCCTGTATTG-GGG--------GAGTA
+s droWil2.CH964274                 422475 72 -  1035393 tgcgtatgtca--------t-atgagggtatacataGACTTTGCCTCTCtgccaattt-t---cttttttttgt-ttg-ggg--------gAGTA
+s droVir3.scaffold_12963         12292000 48 - 20206255 CGGGCGAGAGG--------C-AT------------ACACATCGC----ATCTCAGCTC-TCAA------------ATG-GGG--------GAGCG
+
+a score=587670.000000
+s dm6.chr2L                      11113652 67 + 23513712 AA---------AGGTGTGACAAAGATAACATTTCACGCATCCCA-G-----TGATAAT------AC-------ACCCAT-------AACACGCT----CATGTT-----AC
+s droSim1.chr2L                  10913195 67 + 22036055 AA---------AGGTGTGACAAAGATAACATTTCACGCATCCCA-G-----TGATAAT------AC-------ACCCAT-------AACACGCT----CATGTT-----AC
+s droSec1.super_3                 6514980 67 +  7220098 AA---------AGGTGTGACAAAGATAACATTTCACGCATCCCA-G-----TGATAAT------AC-------ACCCAT-------AACACGCT----CATGTT-----AC
+s droYak3.chr2L                   7509643 67 + 22324452 aa---------aggtGTGACAAAGATAACATTTCACGCATCCAA-G-----TGATAAT------AC-------ACCCAT-------AACACGCT----CATGTT-----AC
+s droEre2.scaffold_4929          12310413 67 - 26641161 AA---------AGGTGTGACAAAGATAACATTTCACGCATCCCA-G-----TGATAAT------AC-------ACCCAT-------AACACGCT----CATGTT-----AC
+s droBia2.KB462833                7577450 67 -  9561034 AA---------AGGTGTGACAAAGATAATATTTCACGCATCTCA-G-----CGATAAT------AC-------GCCCAT-------AACGCGCT----CATGTC-----AC
+s droSuz1.KI419149               20991101 67 + 22559587 AA---------AGGTGCGACAAAGATAATATTTCACGCATCTCA-G-----CGATAAT------AC-------GCCCAT-------AACGCGCT----CATATC-----AC
+s droAna3.scaffold_12916         12238327 79 + 16180835 AA---------AAGTGTGACAGGGATAATATTTCACACCTCTCA-T-----TCATATTCTTGTGGC-------ATTTATTGGCGTAGACACATA----CATGTC-----G-
+s droBip2.KB464412                 582210 67 +  1192065 AA---------AACGGTGTCAAAGATAATATTTCACACATCTTA-TGTTCATTATATT-------C-------ATTCATTGTTG--------------CCTGTT-----A-
+s droEug2.KB464674                 547722 65 +  1036559 AA---------AGGTGCGA-AAAGATAATATTTCACGCATCTCA-G-----CGATAAT------AC-------GCCCAT-------AACACGCT----CATGTC-----A-
+s droEle2.KB458284                 295183 66 -   694708 AA---------AGGTGTGACAAAGATAATATTTCACGCATCTCA-G-----TGATAAC------AC-------ACCCAT-------AACACGCT----CATGTC-----A-
+s droKik2.KB459867                 340312 67 +  1161901 AA---------AGGTgtgacaataataatatttcacgCATCCCGTG-----TGATAAT------AT-------AGACAT-------AACACGCT----TTTGTC-----A-
+s droTak2.KB461482                  27490 70 -    73846 TA---------AGGTGTGACAACGATAATTTTTCATGTATCTCG-A-----GGATAAT------AC-------GCCCAT-------AACACACTTACATATGTC-----A-
+s droRho2.KB451665                  37739 66 +    84275 AA---------AGGTGTGACAAAGATAATATTTCATGCATCTCA-G-----TGATAAT------AC-------ACCCAT-------AACACGCG----TATGTC-----A-
+s droFic2.KB457561                 602637 71 +   912194 AA---------AGGTGTGACAAAGATAATATTTCACGCATCCCA-G-----CGATAAT------AC-------ACCCAT-------AACACGCT----CATGTCTAACAA-
+s droPse3.chr4_CH379060_3_random  6460909 67 + 11685562 AA---------AGGTGTGACGAAGATAATATTCCACGCATCTCA-G-----CGATAAT------AT-------AGCAAT-------AACATTCT----CATAAC-----AC
+s droPer1.super_1                 7956179 67 + 10282868 AA---------AGGTGTGACGAAGATAATATTCCACGCATCTCA-G-----CGATAAT------AT-------AGCAAT-------AACATTCT----CATAAC-----AC
+s droMir2.chr4                   22468636 72 + 28826359 AA---------AGGTGTGACGAAGATAATATTCCACGCATCTCA-G-----CGATAAT------AT-------AGCAAT-------AACATTCT----CATAACAGAGAAC
+s droWil2.CH964274                 422547 74 -  1035393 AAAGGTGTTGTAGGTGTGACAAGGATAATATTTCATGACTTAAATG-----TAATAAT------AT-------AGCAAT-------TAC---CT----TGTGTT-----TC
+s droVir3.scaffold_12963         12292048 57 - 20206255 AA---------AGGTGTGACAAATATTATATTCTATGCTTGCGG-G-----TGATAAT------AC----AGCAGCAAT-------TAC----------------------
+s droGri2.scaffold_15252          6204892 61 - 17193109 AA---------AGGTGTGACAAATATAATATTTTATGCTTGTGG-G-----TGATAAT------AATACGTACAGCAAT-------TAC----------------------
+
+a score=-6922.000000
+s dm6.chr2L                      11113719 6 + 23513712 ATGTTA
+s droSim1.chr2L                  10913262 6 + 22036055 ATATTA
+s droSec1.super_3                 6515047 6 +  7220098 ATATTA
+s droYak3.chr2L                   7509710 6 + 22324452 ATATAC
+s droEre2.scaffold_4929          12310480 6 - 26641161 ATATGT
+s droPse3.chr4_CH379060_3_random  6460976 3 + 11685562 ATA---
+s droPer1.super_1                 7956246 3 + 10282868 ATA---
+s droMir2.chr4                   22468708 6 + 28826359 ATAACA
+s droVir3.scaffold_12963         12292111 1 - 20206255 A-----
+s droGri2.scaffold_15252          6204958 1 - 17193109 A-----
+
+a score=6734.000000
+s dm6.chr2L                      11113725 1 + 23513712 C
+s droSim1.chr2L                  10913268 1 + 22036055 C
+s droSec1.super_3                 6515053 1 +  7220098 C
+s droYak3.chr2L                   7509716 1 + 22324452 C
+s droEre2.scaffold_4929          12310486 1 - 26641161 T
+s droAna3.scaffold_12916         12238422 1 + 16180835 T
+s droEug2.KB464674                 547787 1 +  1036559 C
+s droEle2.KB458284                 295249 1 -   694708 C
+s droKik2.KB459867                 340379 1 +  1161901 C
+s droTak2.KB461482                  27560 1 -    73846 C
+s droRho2.KB451665                  37805 1 +    84275 C
+s droFic2.KB457561                 602708 1 +   912194 C
+s droPse3.chr4_CH379060_3_random  6460982 1 + 11685562 C
+s droPer1.super_1                 7956252 1 + 10282868 C
+s droMir2.chr4                   22468720 1 + 28826359 C
+s droVir3.scaffold_12963         12292112 1 - 20206255 T
+s droGri2.scaffold_15252          6204959 1 - 17193109 T
+
+a score=126220.000000
+s dm6.chr2L                      11113726 20 + 23513712 ATTGGAGGGTG-AACTGGTCC---------------------
+s droSim1.chr2L                  10913269 20 + 22036055 ATTGGAGGGTG-AACTGGTCC---------------------
+s droSec1.super_3                 6515054 20 +  7220098 ATTGGAGGGTG-AACTGGTCC---------------------
+s droYak3.chr2L                   7509717 20 + 22324452 ATCGGAGGGTG-AACTGGTCC---------------------
+s droEre2.scaffold_4929          12310487 20 - 26641161 ATATGAGGGTG-AACTGGTCC---------------------
+s droBia2.KB462833                7577517 20 -  9561034 ATCCGAGGGTG-AACTGGTCC---------------------
+s droSuz1.KI419149               20991168 20 + 22559587 ATCCGAGGGTG-AACTGGTCC---------------------
+s droEug2.KB464674                 547788 20 +  1036559 ATCCGAGGGTG-AACTGGTCC---------------------
+s droEle2.KB458284                 295250 20 -   694708 AGCCGAGGGTG-AACTGGTCC---------------------
+s droKik2.KB459867                 340380 21 +  1161901 ATCCGAGGGTGAAATTGGTTC---------------------
+s droTak2.KB461482                  27561 20 -    73846 ATCCTAGAGTG-AACTGGTCC---------------------
+s droRho2.KB451665                  37806 20 +    84275 ATCCGAGGGTG-GGCTGGTCT---------------------
+s droFic2.KB457561                 602709 20 +   912194 ATCCGAGGGTG-AACTGGTCC---------------------
+s droPse3.chr4_CH379060_3_random  6460983 19 + 11685562 ATCCGAGGGTG-GACTGGAC----------------------
+s droPer1.super_1                 7956253 19 + 10282868 ATCCGAGGGTG-GACTGGAC----------------------
+s droMir2.chr4                   22468721 19 + 28826359 ATCCGAGGGTG-GACTGGAC----------------------
+s droVir3.scaffold_12963         12292113 38 - 20206255 ATTCGAGGGTT-AGT---TATTAGATACGGATCAATAGATAC
+s droGri2.scaffold_15252          6204960 32 - 17193109 -TTTGGGGGTG-GATTCCTACCAGATAC--------AGCTAC
+
+a score=-132983.000000
+s dm6.chr2L                      11113746  75 + 23513712 TCC------------------------------AATTGG-TT------CGCC-----ATTCAATT-------------------TT---------ATATTTATGGGATT-T--------GT-------TTTGCGG---GGAT--------------TAACGCAGGACTTA-----GGGGAAT--C
+s droSim1.chr2L                  10913289  67 + 22036055 TGC------------------------------AATTGGTTT------CGCC-----ATTCAATT-------------------TT---------ATATTTATGGGATT-T--------GT-------TTTGCGG---GGAT--------------T-ACGC-------------AGGGAAT--C
+s droSec1.super_3                 6515074  74 +  7220098 TGC------------------------------AATTGG-TT------CGCC-----ATTCAATT-------------------TT---------ATATTTATGGGATT-T--------GT-------TTTGCGG---GGAT--------------T-ACGCAGGACTTA-----AGGGAAT--C
+s droYak3.chr2L                   7509737  74 + 22324452 TCC------------------------------AATTGG-TT------CACC-----ATtcgatt-------------------tt---------atatttatgggATT-T--------GT-------TTTGCGG---GGAT--------------T-ACGCAGGACTTA-----AGGGAAT--C
+s droEre2.scaffold_4929          12310507  74 - 26641161 ACC------------------------------AATTGG-TT------CGCC-----ATTCGATT-------------------TT---------ATATTTATGGGATT-T--------GT-------TTTGCGG---GGAT--------------T-AGGCAGGATTTA-----AGGGAAT--C
+s droBia2.KB462833                7577537 100 -  9561034 TGCGCTGGTTTTGTTA--------CA--TATG-AAATTG-TT------CCCC-----ATTCGTTT-------------------TT---------ATAGTTATGGGATT-ATGGGATTTGT-------TTTTCTG---GGAT--------------T-ACTCAGGGATCG-----gagaaaa---
+s droSuz1.KI419149               20991188  88 + 22559587 TGCGCTGGTTTT-------------A--TATG-AAATTG-TT------CCCC-----Attcgttt-------------------tt---------atatttatgggaTT-G--------GT-------TTTTCTG---CGAT--------------T-ACACAGGGATTA-----GGGAAAA--C
+s droAna3.scaffold_12916         12238451  99 + 16180835 ---------------T--------CC--TATT-AATTTA-TA------GAGC-----CTTTAAAT-------------------ATGATGCCTAAATAGCTGTAGAATC-T--------GTAGATAGAATTTTGG---AACT--------------T-TTTCAAAATTTATTTATAAGAAAT--G
+s droEug2.KB464674                 547808  88 +  1036559 -----TCCGCTGGTTT--------TA--TATG-AAATTG-TT------TCCT-----Attcgttt-------------------tt---------atatttatgggaTT-T--------GT-------TTTGCGG---GGAT--------------T-ACACAGGGTTTA-----GGAAAAC--C
+s droEle2.KB458284                 295270  89 -   694708 -----TCCGTGGGTTC--------TG--TATA-AAATTG-TT------CCCC-----attcgttt-------------------tt---------atatttataggaTT-T--------GT-------TTTGCGG---AGAT--------------TAATAAGGGGCTTG-----GGGTTTg--c
+s droKik2.KB459867                 340401  81 +  1161901 ------------------------TA--CATC-GAATTG-CTA----CCCCC-----ATTTGATT-------------------TT---------CGATTTACGGGTTT-G--------TG-------ATGGCAG---GGAT--------------T-ACACCGGACTTA-----AGGAAAAAGC
+s droTak2.KB461482                  27581  84 -    73846 -----TGCGCTGATAT--------TA--CATA-AAATCC-TT------CC--------TTcgatt-------------------at---------atatttatgggaTT-T--------GT-------TTTGT-G---GGAT--------------G-ACTTAGGGCTTA-----Gagcaaa--g
+s droRho2.KB451665                  37826  92 +    84275 -----TCCGCTGGTTTTATA----TG--TATG-AAAATA-TT------CCCC-----ATTCGTTT-------------------TT---------AGATTTATGGCATT-T--------GT-------TTTGAGG---GGAT--------------T-ACTAAGGGTTTA-----GGAAAAG--G
+s droFic2.KB457561                 602729  89 +   912194 -----TCCGCAGGTTT--------TA--TATGAAAATGT-TT------CCCC-----actcgttt-------------------tt---------ttatttatgggaTT-T--------GT-------TTTCATG---GGAT--------------T-ACTAAGGGTTTA-----AGGAAAG--C
+s droPse3.chr4_CH379060_3_random  6461002  92 + 11685562 ----------------CCGACTGGTA--TACA-AAATGA-TTGTTTCCCCCCAACGAAATGACTG-------------------CC---------CGATTTGTGGGTCT-T--------GG-------TTGT--G---GGAT--------------T-A-AGAGGAATTA-----AAGTAAA---
+s droPer1.super_1                 7956272  92 + 10282868 ----------------CCGACTGGTA--TACA-AAATGA-TTGTTTCCCCCCAACGAAATGACTG-------------------TC---------CGATTTGTGGGTCT-T--------GG-------TTGT--G---GGAT--------------T-A-AGAGGAATTA-----AAGTAAA---
+s droMir2.chr4                   22468740  91 + 28826359 ----------------CCGACTGGTA--TAC--AAATGA-TTGTTTCCCCCCAACGAAATGACTG-------------------TC---------CGATTTGTGGGTCT-T--------GG-------TTGT--G---GGAT--------------T-A-AAAGGAATTA-----AAGTAAA---
+s droVir3.scaffold_12963         12292151  96 - 20206255 -----------------------TTAACGATT-ATCAGA-CT------TTAC-----TCGCATTTCGTTTTATTATCTAAGCTATT---------AAATTGATTAGTTTTT--------AA-------TTAACTCAAGGCACTTTTTAGGCCTATC-----------------------------
+s droGri2.scaffold_15252          6204992  45 - 17193109 -----------------------GTA--GATT-A-AATG-CT------TAGC-----GCGTACTT-------------------TT---------AAA------------A--------GA-------TTTACTC---GCAT-------------------------------------------
+
+a score=-153987.000000
+s dm6.chr2L                      11113821 46 + 23513712 CTTATATGGAAAAA--------------CCCCAATGTCGCCGCA-ACG-----------------AAAATGAATA----------GGA
+s droSim1.chr2L                  10913356 46 + 22036055 CTTATATGGAAAAA--------------CCCCAATATCGCCGTA-ACG-----------------AAAATGAATA----------GGA
+s droSec1.super_3                 6515148 46 +  7220098 CTTATATGGAAAAA--------------CCCCAATGTCGCTGTA-GCG-----------------AAATTGAATA----------GGA
+s droYak3.chr2L                   7509811 45 + 22324452 CTTATAAAGAAAA---------------CCCAAATATCGTCGTG-ACG-----------------AAATTGAGTA----------GAC
+s droEre2.scaffold_4929          12310581 44 - 26641161 CGTATAAGGAAAA----------------CCAAATATCGTCGTA-ACG-----------------AAATTGAATA----------GAA
+s droBia2.KB462833                7577637 52 -  9561034 --tataaagaaaaa---------------cacaacatCCGATTA-ATAT---------------TGAAAGCAATGGC---TCGATGCA
+s droSuz1.KI419149               20991276 57 + 22559587 TTTATGAAGaaaaa------------aaGCACAGTATTGGATTG-ACAT---------------TAAAAGCAATGGC---TCGATGCA
+s droAna3.scaffold_12916         12238550 60 + 16180835 GGTCTATAAAGAAATTCTTATAATATATACAAAACTTCAAGGAT-ATA-----------------CATAGGTACA----------AGC
+s droEug2.KB464674                 547896 53 +  1036559 CTCATAAAGTAGAA---------------CACAATACCGgactg-a-------------------aattgaaatgtcGTTTTGAAGAA
+s droEle2.KB458284                 295359 49 -   694708 ctaataaaataaaa---------------cgtaatTTTAGATTGTATGt--------------aagaaatttatt----------gaa
+s droKik2.KB459867                 340482 48 +  1161901 CTCATAAATGG------------------TTCCATATCGGATTG-GAATCGA-----------GGAAATTGTAAA----------TCA
+s droTak2.KB461482                  27665 55 -    73846 ttaaaaaaggaaaa---------------cacaatatccgattg-aaatta--------------aaatcaaatt---gtttgatgaa
+s droRho2.KB451665                  37918 53 +    84275 CTTATAAAAGGAAA---------------TGCAATATCGGATAG-AAATCTA---------AGAGCTATTAAGAA----------GCA
+s droFic2.KB457561                 602818 42 +   912194 CTCGTAGCAGACAA---------------TTTAATATCGgcttg---------------------aaattgaaaa----------gca
+s droPse3.chr4_CH379060_3_random  6461094 51 + 11685562 ----TACAATAAGA-------------------ATATCAGAGGG-ATTTGGT--------CACGAAAATTAATTG-----GTGGTGGT
+s droPer1.super_1                 7956364 51 + 10282868 ----TACAAAAAGA-------------------ATATCAGAGGG-ATTTGGT--------CACGAAAATTAATTG-----GTGGTGGT
+s droMir2.chr4                   22468831 51 + 28826359 ----TACAATAAGA-------------------ATAGCAGAGGG-ATTTGGT--------CACGAAAATTAATTG-----GTGGTGGT
+s droGri2.scaffold_15252          6205037 47 - 17193109 ------------------------------TTAATATTCAATTA-TTTTATTACAGCAGCTTGGCAAATTGAATA----------AAA
+
+a score=-37010.000000
+s dm6.chr2L                      11113867 15 + 23513712 ATTGAGCAGACATTT
+s droSim1.chr2L                  10913402  4 + 22036055 ATTG-----------
+s droSec1.super_3                 6515194  4 +  7220098 TTTG-----------
+s droYak3.chr2L                   7509856  4 + 22324452 ATTG-----------
+s droEre2.scaffold_4929          12310625 15 - 26641161 ATTAAGCAGACATTG
+s droBia2.KB462833                7577689  4 -  9561034 ATTG-----------
+s droSuz1.KI419149               20991333  4 + 22559587 ATTG-----------
+s droAna3.scaffold_12916         12238610  4 + 16180835 TTTA-----------
+s droEug2.KB464674                 547949  4 +  1036559 ATCG-----------
+s droEle2.KB458284                 295408  4 -   694708 attg-----------
+s droKik2.KB459867                 340530  3 +  1161901 TTT------------
+s droTak2.KB461482                  27720  4 -    73846 atta-----------
+s droRho2.KB451665                  37971  3 +    84275 ATT------------
+s droFic2.KB457561                 602860  4 +   912194 attt-----------
+s droPse3.chr4_CH379060_3_random  6461145  2 + 11685562 AT-------------
+s droPer1.super_1                 7956415  2 + 10282868 AT-------------
+s droMir2.chr4                   22468882  2 + 28826359 AT-------------
+s droVir3.scaffold_12963         12292300  2 - 20206255 at-------------
+s droGri2.scaffold_15252          6205106  2 - 17193109 CC-------------
+
+a score=-64023.000000
+s dm6.chr2L                      11113882 16 + 23513712 CCTAGAATCTTTTGCA--
+s droSim1.chr2L                  10913406 13 + 22036055 ---AGAATCTTTTGGA--
+s droSec1.super_3                 6515198 13 +  7220098 ---AGAATCTTATGGA--
+s droYak3.chr2L                   7510005  7 + 22324452 CCTGGA---------A--
+s droEre2.scaffold_4929          12310640 13 - 26641161 CCTAGAATC---TGGA--
+s droBia2.KB462833                7577693 16 -  9561034 TATAAAATCGTTGGGG--
+s droSuz1.KI419149               20991337 16 + 22559587 ATTAAAATCTTTGGGA--
+s droAna3.scaffold_12916         12238624 16 + 16180835 tttttaattttatttt--
+s droEug2.KB464674                 547953 16 +  1036559 TTTAATATCTTTAGGA--
+s droEle2.KB458284                 295422 16 -   694708 TCTGCCATTTTTAGGA--
+s droKik2.KB459867                 340533  4 +  1161901 ------------AGGA--
+s droTak2.KB461482                  27724 16 -    73846 tttcaaatatttgagA--
+s droRho2.KB451665                  37974 16 +    84275 CTCGGAATTATCAGGA--
+s droFic2.KB457561                 602874 14 +   912194 TCTAGGATTATggt----
+s droPse3.chr4_CH379060_3_random  6461147 12 + 11685562 -CTGAAAAATGGA-----
+s droPer1.super_1                 7956417 12 + 10282868 -CTGAAAAATGGA-----
+s droMir2.chr4                   22468884 12 + 28826359 -CTGAAAAATGGA-----
+s droVir3.scaffold_12963         12292302 18 - 20206255 ttatatatCATTCCTACA
+s droGri2.scaffold_15252          6205108 18 - 17193109 TTAAGAAGCTTTTCAGCA
+
+a score=25648.000000
+s dm6.chr2L                      11113898 16 + 23513712 T-TATGTGAAATAAAAC
+s droSim1.chr2L                  10913419 16 + 22036055 T-TATGGGAAATAAAAC
+s droSec1.super_3                 6515211 15 +  7220098 T-TATGGGAAATAAAA-
+s droYak3.chr2L                   7510012 16 + 22324452 T-TAAGGgaaataaaac
+s droEre2.scaffold_4929          12310653 16 - 26641161 T-TATGGGAAATAAAAC
+s droBia2.KB462833                7577709 16 -  9561034 T-TTTAGGGATAATCTA
+s droSuz1.KI419149               20991353 16 + 22559587 T-TATGGAAAACAGCTt
+s droAna3.scaffold_12916         12238660 16 + 16180835 T-TATTGGAACTAATAC
+s droBip2.KB464412                 582821 16 +  1192065 t-taattgaaataatat
+s droEug2.KB464674                 547969 16 +  1036559 T-TTTCGCAATTAACAT
+s droEle2.KB458284                 295438 16 -   694708 T-TATGGAGAAAAGCAT
+s droKik2.KB459867                 340542 16 +  1161901 T-TATGGGAAGAGAGAT
+s droTak2.KB461482                  27740 16 -    73846 T-TATGGAAAGCACTGA
+s droRho2.KB451665                  37990 13 +    84275 C-TATGGGGAACAT---
+s droFic2.KB457561                 602888 13 +   912194 ----taataaataagaa
+s droPse3.chr4_CH379060_3_random  6461159 16 + 11685562 T-TGTTGGAaagaaaat
+s droPer1.super_1                 7956429 16 + 10282868 T-TGTTGGAAAGAAAAT
+s droMir2.chr4                   22468896 16 + 28826359 T-TGTTGGAAAGAAAAT
+s droVir3.scaffold_12963         12292320 14 - 20206255 TATTTTGAAATAAA---
+s droGri2.scaffold_15252          6205126 15 - 17193109 T-TCTGAAAATCAAAG-
+
+a score=6996.000000
+s dm6.chr2L                      11113914 3 + 23513712 TAT
+s droSim1.chr2L                  10913435 3 + 22036055 TAT
+s droYak3.chr2L                   7510028 3 + 22324452 tat
+s droEre2.scaffold_4929          12310669 3 - 26641161 TAT
+s droBia2.KB462833                7577725 3 -  9561034 GAT
+s droSuz1.KI419149               20991369 3 + 22559587 cat
+s droAna3.scaffold_12916         12238676 3 + 16180835 CAA
+s droBip2.KB464412                 582837 3 +  1192065 tta
+s droEug2.KB464674                 547988 3 +  1036559 TAT
+s droEle2.KB458284                 295454 3 -   694708 AGT
+s droKik2.KB459867                 350638 3 +  1161901 tat
+s droTak2.KB461482                  27757 3 -    73846 AAT
+s droRho2.KB451665                  38003 3 +    84275 TAT
+s droFic2.KB457561                 602901 3 +   912194 aat
+s droPse3.chr4_CH379060_3_random  6461181 3 + 11685562 aat
+s droPer1.super_1                 7956451 3 + 10282868 AAT
+s droMir2.chr4                   22468918 3 + 28826359 TAT
+s droGri2.scaffold_15252          6205141 1 - 17193109 --C
+
+a score=-773128.000000
+s dm6.chr2L                      11113917  50 + 23513712 TAAGCAA-----TATAAA----TAC--TTATGAAT--------------------TGT--------------------------------------------------------AAATATTAAGAA---------------------------AATAA--ATAA---------------------CT
+s droSim1.chr2L                  10913438  82 + 22036055 TAGGCAA-----TAGAAA----TAC--TTATGATTAACAAAGGGCA---------CAT--------------------------GATAGTC-----------------ttttaaaaatattaagaaaat----a-------gtatta------aataa--ataa-----------------------
+s droSec1.super_3                 6515226  83 +  7220098 ----CAA-----TATAAT----TAC--TTATGAATAGGAAAAGGCAT--------CAT----------------------------TAGTC-----------------ttttaaaaatattaagaaaat----a-------gtattc------aataa--ataaa-----------------taact
+s droYak3.chr2L                   7510031  92 + 22324452 taagcAA-----TATAA----------TCTTAAATAGAAA---------------TATGgaagcattta---------------aatattc-----------------tttttataatattaagaaaattaaaa-------gattta------aataa--ataa------------------taact
+s droEre2.scaffold_4929          12310672 128 - 26641161 TAGGCAA-----TAAAAA----TAAGGGTTTAAATAGAAGAGGGCAGCGGAGCTTAATTAAAACATTAAAGCCATTCTCATGACAATATTC-----------------TTTTTAAAATGTTAAGAAAATGAAAA-------GATTTA------AGTAA--GTAA------------------TAATT
+s droBia2.KB462833                7577728  67 -  9561034 ACATAAAACttcaagaaa----taa--ttttaag--------------------------------------------------------------------------------aaagaaGAGAAAAGTATAAGT-----CCTTTCg------accaa--ttaa---------------------tt
+s droSuz1.KI419149               20991372  94 + 22559587 aagaaaaa----aaaaat----taa--gtttaagataACATAAGTATTAATTCATTAT----------------------------TCATT-----------------ATAtgacaaaaacaattaagtttaag---------ataa------cacaa--ttaa---------------------tt
+s droAna3.scaffold_12916         12238679  65 + 16180835 TTGTTTT-----TGAAAAA---TAG--GTTCCATTAG------------------TTT--------------------------------------------------------ATAGATTTCTAACATATTAT-------------------ATTAAACATTG-------------------ATGC
+s droBip2.KB464412                 582840  60 +  1192065 ttttaat-----taaagtatcctat--attttatta-------------------ttt--------------------------------------------------------atatattc---acatatata-------------------aataa--attg---------------------gc
+s droEug2.KB464674                 548123  68 +  1036559 taagcaa-----tgaaaaaa--tat--atttcaaaaaaa----------------tgt------------------------------------------------------aaatatgttattaaaatttatc---------ttta------aaaat--atta-----------------------
+s droEle2.KB458284                 295457  61 -   694708 AAGGCga-----aaatct----taa--ttaaaaatata-----------------ctt--------------------------------------------------------gaatttaaaaaaattgtata-----------gg------aataa--ttta-----------------------
+s droKik2.KB459867                 350641  61 +  1161901 --------------------------------------------------------------------------------------tattc----------------aaatcaaatactttagtaaaatataaa------tatttta------gttga--attaaaa-----acaag-----gGGTT
+s droTak2.KB461482                  27760  80 -    73846 ------------------------------------------------------------------------------TAAGTTTACAGTTTA--------GAGAGAATTCTACACACATAACACAGATGTGAA-------------------AATGA--ATGATGATAATGACAGGCaaaaaaaTT
+s droRho2.KB451665                  38006  54 +    84275 -----------------------------------------------------AAAAt------------------------ggaataaac-----------------------aaattttgataaattaccAATTGGGAAGtgata------aaaag--tt-------------------------
+s droFic2.KB457561                 602904  73 +   912194 -------------------------------------------------------------------------------cagAGGATATGTTAATTAC---AAATGGATTTTTACTAGCTTAAAATACTCTCAg-------atattaaacaataacaa--ataa-----------------------
+s droPse3.chr4_CH379060_3_random  6461184  50 + 11685562 -------------------------------------------------------------------------------------------tAAGAACCTTATAAGCCTATTGACTGTTTTTGACAATTATTAT-------------------AATAC--AA-------------------------
+s droPer1.super_1                 7956454  50 + 10282868 -------------------------------------------------------------------------------------------TAAGAACCTTATAAGCCTATTGACTGTTTTTGACAATTATTAT-------------------AATAA--AA-------------------------
+s droMir2.chr4                   22468921  50 + 28826359 -------------------------------------------------------------------------------------------TAAGAACCTTATAAGCCTATTGTCTGTTtttgataattattat-------------------aataa--aa-------------------------
+s droVir3.scaffold_12963         12292334  29 - 20206255 ------------------------------------------------------------------------------------------------------GAAATAATTGTGGAATTTCAAGATTATTT--------------------------------------------------------
+s droGri2.scaffold_15252          6205142  30 - 17193109 ------------------------------------------------------------------------------------------------------GAAATGTCTTTGAGTATTTAAGAAAATTGA-------------------------------------------------------
+
+a score=-58917.000000
+s dm6.chr2L                      11113967 12 + 23513712 CTTTCTATAA---AT---------
+s droSim1.chr2L                  10913520 12 + 22036055 CTCTCTATAA---AT---------
+s droSec1.super_3                 6515309 12 +  7220098 ctttctataa---at---------
+s droYak3.chr2L                   7510123 12 + 22324452 cttactaaat---at---------
+s droEre2.scaffold_4929          12310800 12 - 26641161 CTTGCTATAA---AT---------
+s droBia2.KB462833                7577795 11 -  9561034 tttattattg---a----------
+s droSuz1.KI419149               20991466 12 + 22559587 tttgattttg---at---------
+s droAna3.scaffold_12916         12238744  5 + 16180835 CTTT----------T---------
+s droBip2.KB464412                 582900  6 +  1192065 cttt---------at---------
+s droEug2.KB464674                 548191 11 +  1036559 -taaccATGA---AC---------
+s droEle2.KB458284                 295518  2 -   694708 -------------gt---------
+s droKik2.KB459867                 350702 15 +  1161901 TTTGCCAAAAGTCAT---------
+s droTak2.KB461482                  27840 12 -    73846 CGTTATCTAA---At---------
+s droRho2.KB451665                  38646 12 +    84275 TTTTTTATAC---ct---------
+s droFic2.KB457561                 602977  6 +   912194 ------ataa---ac---------
+s droPse3.chr4_CH379060_3_random  6461234  2 + 11685562 CT----------------------
+s droPer1.super_1                 7956504 12 + 10282868 CTTTATGGAA---AT---------
+s droMir2.chr4                   22468971 12 + 28826359 cttTATGGAA---AT---------
+s droVir3.scaffold_12963         12292363 20 - 20206255 -CCTCTAAGA---AAAGCAAAGGT
+s droGri2.scaffold_15252          6205172 20 - 17193109 -TCGATATAG---ATTTTTCAGCT
+
+a score=-23829.000000
+s dm6.chr2L                      11113979  8 + 23513712 T-CA---TCAAA
+s droSim1.chr2L                  10913532  8 + 22036055 T-AA---TCAAA
+s droSec1.super_3                 6515321  8 +  7220098 t-aa---taaaa
+s droYak3.chr2L                   7510135  8 + 22324452 t-aa---ttaGA
+s droEre2.scaffold_4929          12310812  8 - 26641161 T-AA---TCAGA
+s droSuz1.KI419149               20991478  1 + 22559587 t-----------
+s droAna3.scaffold_12916         12238749  8 + 16180835 T-CA---TAAAA
+s droBip2.KB464412                 582906  8 +  1192065 t-ga---taaaa
+s droEug2.KB464674                 548203  8 +  1036559 T-TA---TAAGA
+s droEle2.KB458284                 295520  8 -   694708 t-tt---taaga
+s droKik2.KB459867                 350717 11 +  1161901 T-TAAGTTAAGA
+s droTak2.KB461482                  27852  3 -    73846 t-tt--------
+s droRho2.KB451665                  38658  9 +    84275 tgta---aaaaa
+s droFic2.KB457561                 602983  8 +   912194 t-ca---aCAAG
+s droPse3.chr4_CH379060_3_random  6461236  8 + 11685562 T-TA---TGGAA
+s droVir3.scaffold_12963         12292383  8 - 20206255 -GCA---TTCAG
+s droGri2.scaffold_15252          6205192  8 - 17193109 -ACA---TTAAA
+
+a score=5563.000000
+s dm6.chr2L                      11113987 1 + 23513712 A
+s droSim1.chr2L                  10913540 1 + 22036055 A
+s droSec1.super_3                 6515329 1 +  7220098 a
+s droYak3.chr2L                   7510143 1 + 22324452 A
+s droEre2.scaffold_4929          12310820 1 - 26641161 A
+s droAna3.scaffold_12916         12238757 1 + 16180835 A
+s droBip2.KB464412                 582914 1 +  1192065 a
+s droEug2.KB464674                 548211 1 +  1036559 A
+s droEle2.KB458284                 295528 1 -   694708 a
+s droKik2.KB459867                 350728 1 +  1161901 A
+s droRho2.KB451665                  38667 1 +    84275 a
+s droFic2.KB457561                 602991 1 +   912194 T
+s droPse3.chr4_CH379060_3_random  6461709 1 + 11685562 A
+s droPer1.super_1                 7956979 1 + 10282868 A
+s droMir2.chr4                   22469486 1 + 28826359 A
+s droVir3.scaffold_12963         12292391 1 - 20206255 G
+s droGri2.scaffold_15252          6205200 1 - 17193109 G
+
+a score=1766.000000
+s dm6.chr2L                      11113988 4 + 23513712 TTCA
+s droSim1.chr2L                  10913541 4 + 22036055 GTCA
+s droSec1.super_3                 6515330 4 +  7220098 ttCA
+s droYak3.chr2L                   7510144 4 + 22324452 GTCA
+s droEre2.scaffold_4929          12310821 4 - 26641161 GTCA
+s droBia2.KB462833                7577806 1 -  9561034 ---g
+s droSuz1.KI419149               20991479 1 + 22559587 ---a
+s droAna3.scaffold_12916         12238758 4 + 16180835 TTTG
+s droBip2.KB464412                 582915 4 +  1192065 attg
+s droEug2.KB464674                 548212 4 +  1036559 CTCT
+s droEle2.KB458284                 295529 4 -   694708 ttta
+s droKik2.KB459867                 350729 3 +  1161901 TTT-
+s droRho2.KB451665                  38668 4 +    84275 ttta
+s droFic2.KB457561                 603140 3 +   912194 -ttg
+s droPse3.chr4_CH379060_3_random  6461710 4 + 11685562 TTCG
+s droPer1.super_1                 7956980 4 + 10282868 TTCG
+s droMir2.chr4                   22469487 4 + 28826359 TTCG
+
+a score=1780.000000
+s dm6.chr2L                      11113992 1 + 23513712 T
+s droSim1.chr2L                  10913545 1 + 22036055 T
+s droSec1.super_3                 6515334 1 +  7220098 T
+s droYak3.chr2L                   7510148 1 + 22324452 T
+s droEre2.scaffold_4929          12310825 1 - 26641161 T
+s droBia2.KB462833                7577807 1 -  9561034 c
+s droSuz1.KI419149               20991480 1 + 22559587 c
+s droAna3.scaffold_12916         12238762 1 + 16180835 G
+s droBip2.KB464412                 582919 1 +  1192065 t
+s droEug2.KB464674                 548216 1 +  1036559 T
+s droEle2.KB458284                 295533 1 -   694708 t
+s droFic2.KB457561                 603143 1 +   912194 t
+s droPse3.chr4_CH379060_3_random  6461714 1 + 11685562 C
+s droPer1.super_1                 7956984 1 + 10282868 C
+s droMir2.chr4                   22469491 1 + 28826359 C
+s droWil2.CH964274                 424500 1 -  1035393 t
+
+a score=-173276.000000
+s dm6.chr2L                      11113993 20 + 23513712 CC--ATGGAATAATTGA------------------------TTTCC
+s droSim1.chr2L                  10913546 28 + 22036055 CC--ATGGAAAAATTGATTCATC----------------CGTTTCC
+s droSec1.super_3                 6515335 28 +  7220098 CC--ATGGAAAAATTGATTCATC----------------CGTTTCC
+s droYak3.chr2L                   7510149  8 + 22324452 CC--GT------------------------------------TTCC
+s droEre2.scaffold_4929          12310826 27 - 26641161 CC--ATGAAAAAATTGAATCAGC----------------CG-TTCC
+s droBia2.KB462833                7577808 19 -  9561034 ct--actaaataaatatttca-------------------------
+s droSuz1.KI419149               20991481 18 + 22559587 CT--CGTGGATGATTATTTA--------------------------
+s droAna3.scaffold_12916         12238763 11 + 16180835 AT--TTTAA---------------------------------TAGC
+s droBip2.KB464412                 582920 10 +  1192065 tt--ttgcg---------------------------------TC-C
+s droEug2.KB464674                 548217 28 +  1036559 CA--ATGAAATAATTGATTTACC----------------TGTTGCC
+s droEle2.KB458284                 296062 25 -   694708 CA--ATGAAATAATTGATTCTTC----------------GGTT---
+s droKik2.KB459867                 350732 44 +  1161901 CC--GAGGAACGTTTTTCCAAACTTGTTGTCAATATTAGTAGTTCC
+s droTak2.KB461482                  27855 14 -    73846 --------------------------------gtatggagattttc
+s droRho2.KB451665                  38672 25 +    84275 ----ataaaataattgattctTC-----------------AGTTCC
+s droFic2.KB457561                 603145 27 +   912194 ta--atgaaataattgatttttc-----------------agTTCC
+s droPse3.chr4_CH379060_3_random  6461715 26 + 11685562 TG--ATGGGATAATTGATTTTTA------------------GCTCC
+s droPer1.super_1                 7956985 26 + 10282868 TG--ATGGGATAATTGATTTTTA------------------GCTCC
+s droMir2.chr4                   22469492 26 + 28826359 TG--ATGGGATAATTGATTTTTA------------------GCTCC
+s droWil2.CH964274                 424501  9 -  1035393 -------------------------------------ctaaatgaa
+s droVir3.scaffold_12963         12292393 18 - 20206255 ----ATTCAGGTATTAATTTCT------------------------
+s droGri2.scaffold_15252          6205206 21 - 17193109 CAACATTATAGCTGTATTTTC-------------------------
+
+#eof

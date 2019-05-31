@@ -1,0 +1,428 @@
+---
+title: "Supplemental Methods: Fly mating evolution figures"
+author: "Aram Avila-Herrera"
+date: "`r date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    code_folding: hide
+    highlight: pygments
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = '#>')
+sanitizeRSession <- function(s){
+  s$platform <- ""
+  s$running <- ""
+  s$R.version$platform <- ""
+  s$R.version$os <- ""
+  s$R.version$system <- ""
+  s$BLAS <- basename(s$BLAS)
+  s$LAPACK <- basename(s$LAPACK)
+  s
+}
+oldSessionInfo <- sessionInfo
+sessionInfo <- function(){sanitizeRSession(s = oldSessionInfo())}
+```
+
+```{r, message = FALSE}
+library(tidyverse)
+library(magrittr)
+```
+
+Convenience functions:
+
+```{r}
+# phyloP scores are -log10 p-values of a likelihood ratio test: negative for acceleration, positive for conservation
+score2p <- function(s){
+  10^-(sign(s) * s)
+}
+
+sem <- function(x){
+  sd(x)/sqrt(length(x))
+}
+
+kbl_rename <- function(x){
+  colnames(x) <- sub("phylop_dmel", "D. mel", colnames(x))
+  colnames(x) <- sub("dm6", "D. mel", colnames(x))
+  colnames(x) <- sub("phylop_dsim", "D. sim", colnames(x))
+  colnames(x) <- sub("droSim1", "D. sim", colnames(x))
+  colnames(x) <- sub("phylop_allbr", "All branches", colnames(x))
+  colnames(x) <- sub("browser_phylop_allbr", "All branches (browser)", colnames(x))
+  return(x)
+}
+
+kbl_styl <- function(x, ..., caption){
+  knitr::kable(x, caption = caption, format = "html") %>%
+  kableExtra::kable_styling(full_width = FALSE, position = "left", ...)
+}
+```
+
+Plotting functions:
+
+```{r}
+theme_set(theme_classic())
+plot_histogram <- function(scores_df, test_scores, fill_color = "#3fa9f5", binwidth = 0.1){
+  ggplot(scores_df) + geom_histogram(
+    aes_string(x = test_scores),
+    fill = fill_color,
+    color = "grey20",
+    binwidth = binwidth
+  ) +
+  xlab("PhyloP score")
+}
+```
+
+# Basewise PhyloP scores
+
+## Load basewise scores and annotation
+
+Computed in [methods](./methods.html), tabulated by [mktbl.R](./scripts/mktbl.R)
+
+```{r, message = FALSE}
+scores <- read_tsv("./results/phylop.tsv")
+scores %<>% mutate(isUTR = isUTR3 | isUTR5)
+
+# quick visual check of brower vs local phylop
+plot(select(scores, browser_phylop_allbr, phylop_allbr))
+summary(select(scores, contains("allbr")))
+```
+
+## Final histograms
+
+(Fig S2DEF: all-branches test scores, subtree test scores for *D. melanogaster* and *D. simulans*)
+
+```{r final-hists-chunk}
+mylabs <- as_labeller(
+  c(
+    "browser_phylop_allbr" = "27~insects",
+    "phylop_dmel" = paste(expression(italic("D. melanogaster"))),  # paste("foo~", expression(italic("bar")))
+    "phylop_dsim" = paste(expression(italic("D. simulans")))
+  ),
+  label_parsed
+)
+
+scores_m <- select(scores, -phylop_allbr) %>%
+  gather(branch, phylop, starts_with("phylop_d"), browser_phylop_allbr)
+
+allscores <- ggplot(scores_m, aes(x = phylop, fill = branch), color = "grey20") +
+  geom_histogram(binwidth = 0.1) +
+  facet_wrap(
+    ~branch,
+    labeller = mylabs
+  ) +
+  scale_fill_manual(
+    guide = FALSE,
+    values = c(
+      "browser_phylop_allbr" = "#68409c",
+      "phylop_dmel" = "#3fa9f5",
+      "phylop_dsim" = "#dc913c"
+    )
+  ) +
+  xlab("PhyloP score") +
+  ylab("# of 27way alignment columns")
+allscores
+ggsave(plot = allscores, "figs/allscores-phylop-scores-hist-3.7k.pdf")
+```
+
+## All-branches test
+
+(alternate Fig S2D)
+
+```{r}
+br_allbr_hist <- plot_histogram(scores, "browser_phylop_allbr", fill_color = "#68409c") +
+  ylab("# of 27way alignment columns")
+br_allbr_hist
+ggsave(plot = br_allbr_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0, 2200)), "figs/browser_allbr-phylop-scores-hist-3.7k.pdf")
+ggsave(plot = br_allbr_hist + scale_y_continuous(breaks = seq(0, 200, 50)) + coord_cartesian(ylim = c(0, 210)), "figs/browser_allbr-phylop-scores-hist-3.7k-zoomed.pdf")
+```
+
+### By Annotation
+
+#### phastCons Elements
+
+```{r}
+scores %>%
+  group_by(isConsEl) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+br_allbr_hist + facet_wrap(~isConsEl, labeller = label_both)
+```
+
+#### Coding sequences
+
+```{r}
+scores %>%
+  group_by(isCDS) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+br_allbr_hist + facet_wrap(~isCDS, labeller = label_both)
+```
+
+#### UTRs
+
+```{r}
+scores %>%
+  group_by(isUTR) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+br_allbr_hist + facet_wrap(~isUTR, labeller = label_both)
+```
+
+#### Introns
+
+```{r}
+scores %>%
+  group_by(isIntron) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+br_allbr_hist + facet_wrap(~isIntron, labeller = label_both)
+```
+
+#### Intergenic
+
+```{r}
+scores %>%
+  group_by(isIntergenic) %>%
+  summarize_at(vars(starts_with('browser_phylop_allbr')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+br_allbr_hist + facet_wrap(~isIntergenic, labeller = label_both)
+```
+```
+
+## Subtree tests
+
+### Melanogaster
+
+(alternate Fig S2E)
+
+```{r}
+mel_hist <- plot_histogram(scores, "phylop_dmel") +
+  ylab(expression(paste("# of ", italic("D. mel"), " Bases")))
+mel_hist
+ggsave(plot = mel_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0, 2200)), "figs/dm6-phylop-scores-hist-3.7k.pdf")
+```
+
+### Simulans
+
+(alternate Fig S2F)
+
+```{r}
+sim_hist <- plot_histogram(scores, "phylop_dsim", fill_color = "#dc913c") +
+  ylab(expression(paste("# of ", italic("D. sim"), " Bases")))
+sim_hist
+ggsave(plot = sim_hist + scale_y_continuous(breaks = seq(0, 2000, 500)) + coord_cartesian(ylim = c(0, 2200)), "figs/droSim1-phylop-scores-hist-3.7k.pdf")
+```
+
+### By Annotation
+
+```{r}
+subtreescores <- ggplot(
+    filter(scores_m, grepl("^phylop_d", branch)),
+    aes(x = phylop, fill = branch), color = "grey20"
+  ) +
+  geom_histogram(binwidth = 0.1) +
+  facet_wrap(
+    ~branch,
+    labeller = mylabs
+  ) +
+  scale_fill_manual(
+    guide = FALSE,
+    values = c(
+      #"browser_phylop_allbr" = "#68409c",
+      "phylop_dmel" = "#3fa9f5",
+      "phylop_dsim" = "#dc913c"
+    )
+  ) +
+  xlab("PhyloP score") +
+  ylab("# of 27way alignment columns")
+```
+
+#### phastCons Elements
+
+```{r}
+scores %>%
+  group_by(isConsEl) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+subtreescores + facet_grid(isConsEl~branch, labeller = label_both)
+```
+
+#### Coding sequences
+
+```{r}
+scores %>%
+  group_by(isCDS) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+subtreescores + facet_grid(isCDS~branch, labeller = label_both)
+```
+
+#### UTRs
+
+```{r}
+scores %>%
+  group_by(isUTR) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+subtreescores + facet_grid(isUTR~branch, labeller = label_both)
+```
+
+#### Introns
+
+```{r}
+scores %>%
+  group_by(isIntron) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+subtreescores + facet_grid(isIntron~branch, labeller = label_both)
+```
+
+#### Intergenic
+
+```{r}
+scores %>%
+  group_by(isIntergenic) %>%
+  summarize_at(vars(starts_with('phylop_d')), funs(mean, sem)) %>%
+  kbl_rename() %>%
+  kbl_styl(caption = "PhyloP scores")
+```
+
+```{r}
+subtreescores + facet_grid(isIntergenic~branch, labeller = label_both)
+```
+
+
+### Counts of accelerated sites
+
+- A score of 2 or -2 corresponds to an unadjusted P-value of 0.01 for that base
+- Negative := acceleration
+- Positive := conservation
+
+```{r}
+sig_accel_counts <- scores %>%
+  count(
+    "All branches" = phylop_allbr < -2,
+    "D. mel" = phylop_dmel < -2,
+    "D. sim" = phylop_dsim < -2,
+    "Is Cons El" = isConsEl
+  )
+```
+
+```{r}
+kbl_styl(sig_accel_counts, caption = "Counts of accelerated sites")
+```
+
+```{r pander-f-chunk}
+pander::pander(ftable(xtabs(n ~ ., sig_accel_counts)), style = "rmarkdown")
+```
+
+# Feature-type PhyloP tests
+
+## Load per-feature-type results
+
+```{r per-feature-chunk, message = FALSE}
+ftr_fns <- list.files(
+  path="reg_3.7/phylop",
+  pattern = "-phylop27-ftr-\\w+\\.tsv",
+  full.names = TRUE
+)
+ftr_tbl <- lapply(ftr_fns, read_tsv) %>%
+  setNames(., nm = sub("\\..*$", "", basename(ftr_fns))) %>%
+  bind_rows(.id = "fn")
+ftr_tbl %<>%
+  separate(fn, c("Branch", "FeatureType"), "-phylop27-ftr-")
+ftr_tbl %>% select(
+  Branch, FeatureType,
+  scale, lnlratio, pval,
+  null_scale, alt_scale, alt_subscale
+)
+```
+
+```{r per-feature-p-chunk, message = FALSE}
+ftr_tbl %>%
+  select(Branch, FeatureType, pval) %>%
+  spread(Branch, pval) %>%
+  rename(
+    `All branches` = allbr,
+    `D. mel` = dm6,
+    `D. sim` = droSim1
+  ) %>%
+  kbl_styl(caption = "phyloP P-values" )
+```
+
+# Whole-region all-branches conservation test
+
+```{r}
+read_tsv("reg_3.7/phylop/allbr-phylop27-wholeregion-con.tsv") %>%
+  kbl_styl(caption = "PhyloP test for conservation")
+```
+
+
+# R session info
+
+```{r}
+s <- sessionInfo()
+s
+```
+
+# R Citations
+
+```{r}
+lapply(
+  c(
+    s$basePkgs,
+    names(s$otherPkgs),
+    names(s$loadedOnly)
+  ),
+  citation
+)
+```
+
+<script>
+// add bootstrap table styles to pander tables
+function bootstrapStylePanderTables() {
+  $('tr').parent().parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePanderTables();
+});
+</script>

@@ -1,0 +1,299 @@
+---
+title: "Supplemental Methods: Fly mating evolution"
+author: "Aram Avila-Herrera"
+date: "`r date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    code_folding: hide
+    highlight: pygments
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = '#>')
+sanitizeRSession <- function(s){
+  s$platform <- ""
+  s$running <- ""
+  s$R.version$platform <- ""
+  s$R.version$os <- ""
+  s$R.version$system <- ""
+  s$BLAS <- basename(s$BLAS)
+  s$LAPACK <- basename(s$LAPACK)
+  s
+}
+oldSessionInfo <- sessionInfo
+sessionInfo <- function(){sanitizeRSession(s = oldSessionInfo())}
+```
+
+# gr32a regulatory region
+
+Referenced in the final manuscript as "3.8 kbp regulatory region" (and in
+working drafts as "3.7 kbp"); it contains a gene (CG6201) transcribed in the
+opposite direction of gr32a. It is 3,798 bp long.  We had previously analyzed a
+661 bp sub-region immediately upstream gr32a.
+
+## Coordinates
+
+#### [dm6: `chr2L:11,110,412-11,114,209`](https://genome.ucsc.edu/cgi-bin/hgTracks?db=dm6&position=chr2L%3A11110412-11114209)
+
+Browser coordinates obtained by BLAT search of *melanogaster* sequence
+`>Gr32[mel]` in file: `Gr32aReg.rtf` (copied to `gr32a_3.7kb_upstrm.fa`)
+against the *dm6* melanogaster genome assembly.
+
+**Please note: UCSC browser coordinates start at 1 and include the end coordinate in the specified interval, i.e.
+"1-offset closed". MAF and BED formats start counting with 0 (0-offset). BED
+format does not consider the end coordinate to be in the interval---it is
+"right-open"**
+
+Intron/CDS/UTR/intergenic regions were obtained from the UCSC Table Browser in
+BED format. "Intergenic" is the 3.8kbp region minus "whole gene" features. I
+also downloaded the phastCons conserved elements.
+
+```{bash}
+bedtools subtract -a reg_3.7/coords/reg_3.7.bed -b reg_3.7/coords/wholegene.bed > reg_3.7/coords/intergenic.bed
+```
+
+### List of subregions:
+
+Intron, cds exon, 5' UTR, 3' UTR, intergenic, 661 bp ("gr32-upstream-adjacent")
+
+```{bash}
+head reg_3.7/coords/{cds_exons,introns,utr3,utr5,intergenic,661}.bed
+```
+
+Conserved elements
+
+```{bash}
+gzcat reg_3.7/coords/dm6-allbr-consel27.bed.gz | head
+```
+
+## PhyloP
+
+UCSC Browser track shows conservation/acceleration scores for the coordinates
+above (`dm6-allbr-phylop27.wig.gz` downloaded from the Table Browser). PhyloP
+was run as follows:
+
+- Performs an all branch test (no `--subtree`)
+- Score for each base (`--wig-scores`)
+- Scores are -log p-values for likelihood ratio tests (`--method LRT`)
+- Conservation and acceleration scores reported (`--mode CONACC`)
+- Uses the phastCons neutral model, but adjusts the background frequencies to
+  make the model reversible.
+
+### Data
+
+Alignment
+
+: 27-way alignment for 23 *Drosophila* species, housefly, mosquito, honeybee,
+  and beetle, downloaded from the Table Browser for the coordinates above
+  (`reg_3.7/alignments/dm6-allbr-27way.maf`).
+  <http://hgdownload.cse.ucsc.edu/goldenPath/dm6/multiz27way/>
+
+Neutral model
+
+: Phylogenetic model for neutral evolution from 4-fold degenerate sites in
+  alignment. `dm6.phyloP27way.mod` from
+  <http://hgdownload.cse.ucsc.edu/goldenPath/dm6/phyloP27way/>
+
+See also: <https://genome.ucsc.edu/cgi-bin/hgTrackUi?g=cons27way&db=dm6>
+
+### Verify methods against browser track
+
+Run `phylop` as above to check that we can reproduce the browser track
+(all-branches, basewise test).
+
+```{bash}
+phylop --wig-scores --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/allbr-phylop27.wig
+```
+
+Approximately the same, but not exact... (possibly due to optimization seed and
+rounding)
+
+```{bash}
+head reg_3.7/phylop/allbr-phylop27.wig
+```
+
+```{bash}
+gzcat reg_3.7/tracks/dm6-allbr-phylop27.wig.gz | head -n 20  # browser track
+```
+
+
+### Subtree basewise tests
+
+We are interested in accelerated positions in the *melanogaster* and *simulans*
+branches. Especially, if they are in regions conserved across fruit flies,
+suggesting that something interesting may be occuring in a functional
+regulatory region.
+
+- Re-run `phylop` with `--subtree dm6` and `--subtree droSim1`
+
+```{bash}
+phylop --subtree dm6 --wig-scores --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/dm6-phylop27.wig
+phylop --subtree droSim1 --wig-scores --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/droSim1-phylop27.wig
+```
+
+- Make table ([**`phylop.tsv`**](./phylop.tsv), [mktbl.R](./scripts/mktbl.R)) of
+  phyloP scores and regions:
+    - pos (browser coordinate)
+    - isConsEl
+    - phylop_allbr
+    - phylop_dmel
+    - phylop_dsim
+    - browser_phylop_allbr
+    - is661
+    - isUTR3
+    - isUTR5
+    - isCDS
+    - isIntron
+    - isIntergenic
+
+```{bash}
+scripts/mktbl.R reg_3.7/ 2> results/mktbl.stderr > results/mktbl.stdout
+head results/phylop.tsv
+```
+
+- Extra/TODO: Re-call phastCons elements for non-*melanogaster* and non-*simulans* alignments.
+    - isConsEl_nomel
+    - isConsEl_nosim
+
+- Histogram of p-values for mel, sim
+  **Figures:** See [./figs.html](./figs.html)
+
+### Feature tests
+
+- Re-run `phylop` with `--features` (one score for each exon, intron, utr,
+  intergenic region)
+
+```{bash}
+# Be explicit about trimming and sorting features
+cat reg_3.7/coords/{cds_exons,introns,utr3,utr5,intergenic}.bed | \
+  cut -f1-4 | \
+  bedtools intersect -a - -b reg_3.7/coords/reg_3.7.bed | \
+  sort -u -k1,3 | \
+  sort-bed - > reg_3.7/coords/features.bed
+head reg_3.7/coords/features.bed
+```
+
+#### All-branches
+
+```{bash}
+phylop --features reg_3.7/coords/features.bed --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/allbr-phylop27-features.tsv
+```
+
+#### Subtree
+
+```{bash}
+phylop --features reg_3.7/coords/features.bed --subtree dm6 --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/dm6-phylop27-features.tsv
+
+phylop --features reg_3.7/coords/features.bed --subtree droSim1 --method LRT --mode CONACC dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/droSim1-phylop27-features.tsv
+```
+
+### Feature-type tests
+
+- Get one score/p-value per combined UTRs, combined CDSs, combined introns,
+  combined intergenic regions
+
+```{bash}
+mmaf=reg_3.7/alignments/dm6-allbr-27way.maf
+cat reg_3.7/coords/utr[35].bed > reg_3.7/coords/utr.bed
+for ftr in cds_exons utr introns intergenic; do
+  fmaf=reg_3.7/alignments/dm6-allbr-27way-$ftr.maf
+  bed=reg_3.7/coords/${ftr}.bed
+  maf_parse --features ${bed} ${mmaf} > ${fmaf}
+
+  # all-branches
+  phylop --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CONACC -i MAF dm6.phyloP27way.mod ${fmaf} > reg_3.7/phylop/allbr-phylop27-ftr-${ftr}.tsv
+
+  # subtree
+  phylop --subtree dm6 --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CONACC -i MAF dm6.phyloP27way.mod ${fmaf} > reg_3.7/phylop/dm6-phylop27-ftr-${ftr}.tsv
+
+  phylop --subtree droSim1 --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CONACC -i MAF dm6.phyloP27way.mod ${fmaf} > reg_3.7/phylop/droSim1-phylop27-ftr-${ftr}.tsv
+done
+```
+
+### Whole-region tests
+
+#### All-branches conservation
+
+```{bash}
+phylop --features reg_3.7/coords/reg_3.7.bed --method LRT --mode CON dm6.phyloP27way.mod reg_3.7/alignments/dm6-allbr-27way.maf > reg_3.7/phylop/allbr-phylop27-wholeregion-con.tsv
+```
+
+---
+
+# Other notes
+
+## adjacent region (661bp)
+
+Our previous analysis focused on the 661bp region immediately upstream gr32a
+(technically, includes a bit of the 5' UTR).
+
+`gr32a_661_upstrm.fa`
+
+### "New"
+
+Same methodology as "Old", just uses newer assemblies, alignments, and
+phylogenetic models. We also now look at the whole 3.8kb region and compare
+exonic vs non-exonic regions.
+
+- `dm6-phylop27.wig`
+- `droSim1-phylop27.wig`
+
+### "Old"
+
+- dm3-conacc-allbr track (661bp):
+    - chr2L:11,113,549:11,114,209
+    - species: 12 flies, mosquito, honeybee, beetle
+    - test for acceleration or conservation, base-by-base
+    - score is a -log10 p-value of a likelihood ratio test between "fixed" vs
+      "free" tree scaling parameter evolution models.
+      "negative" scores correspond to acceleration, positive to conservation.
+      e.g., 1.7 = -log10(p-value) => 0.02 = p-value;
+- dmel: same region, but test is only on melanogaster branch (dm3)
+- droSim1: same region, but test is only on simulans branch (droSim1)
+
+# Versions and Citations
+
+## bedtools
+
+Quinlan AR and Hall IM, 2010. BEDTools: a flexible suite of utilities for
+comparing genomic features. Bioinformatics. 26, 6, pp. 841–842.
+
+```{bash}
+bedtools --version
+```
+
+## bedops
+
+```{bash}
+bedops --version
+```
+
+## phast package
+
+```{bash}
+cat ~/src/phast/version
+phylop -h | tail -n 12
+```
+
+## R session info
+
+```{r}
+s <- sessionInfo()
+s
+```
+
+## R Citations
+
+```{r}
+lapply(
+  c(
+    s$basePkgs,
+    names(s$otherPkgs),
+    names(s$loadedOnly)
+  ),
+  citation
+)
+```
