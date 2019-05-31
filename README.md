@@ -2,13 +2,13 @@
 
 Contains analysis of evolutionary rates used in [Evolution of mechanisms that
 control mating in *Drosophila*
-males [^1]](https://www.biorxiv.org/content/early/2017/08/16/177337)
+males](https://www.ncbi.nlm.nih.gov/pubmed/31141679/)[^1]
 
-[^1]:  *Evolution of mechanisms that control mating in* Drosophila *males*
-  Osama M. Ahmed, Nirao M. Shah, David L. Stern, Graeme W. Davis, Katherine S.
-  Pollard, Srinivas Parthasarathy, Aram Avila-Herrera, Khin May Tun, Paula H.
-  Serpa, Justin Peng, Jon-Michael Knapp bioRxiv 177337; doi:
-  <https://doi.org/10.1101/177337>
+[^1]: Ahmed, O.M., Avila-Herrera, A., Tun, K.M., Serpa, P.H., Peng, J.,
+  Parthasarathy, S., Knapp, J.-M., Stern, D.L., Davis, G.W., Pollard, K.S.,
+  Shah, N.M. (2019). Evolution of Mechanisms that Control Mating in Drosophila
+  Males.  Cell Reports 27, 2527-2536.e4. doi:
+  <https://doi.org/10.1016/j.celrep.2019.04.104>
 
 ## Main files
 
